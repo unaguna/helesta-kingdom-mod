@@ -1,0 +1,51 @@
+﻿division_template = {
+	name = "Pedestrian Division"
+	division_names_group = HEL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7087
+		division_template = "Pedestrian Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "HEL"
+		}
+		requested_factories = 1
+		progress = 0.86
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HEL"
+		}
+		requested_factories = 1
+		progress = 0.40
+		efficiency = 100
+	}
+}
