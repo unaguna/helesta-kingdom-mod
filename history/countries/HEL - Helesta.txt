@@ -1,6 +1,10 @@
 ﻿capital = 807
 
-OOB = "ALB_1936"
+OOB = "HEL_1936"
+
+add_ideas = {
+	HEL_ichikara_lize
+}
 
 set_technology = {
 	infantry_weapons = 1
@@ -21,26 +25,15 @@ set_popularities = {
 
 set_convoys = 5
 
-#Victor Emmanuel III of Italy after 39
+# The father of Lize
 create_country_leader = {
-	name = "King Zog"
-	desc = "POLITICS_KING_ZOG_DESC"
-	picture = "Portrait_Albania_King_Zog.dds"
+	name = "The King"
+	desc = "POLITICS_KING_HEL_DESC"
+	picture = "Portrait_King.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
 		#
-	}
-}
-
-create_country_leader = {
-	name = "Enver Hoxha"
-	desc = "POLITICS_KING_ZOG_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		staunch_stalinist
 	}
 }
 
