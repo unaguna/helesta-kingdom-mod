@@ -124,4 +124,49 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HEL_for_japan
+		icon = GFX_goal_generic_military_deal
+		x = 13
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_via_facsism
+		}
+
+		available = {
+			AND = {
+				country_exists = JAP
+				JAP = { is_puppet = no }
+				NOT = { has_war_with = JAP }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_jap_diplomacy_focus
+				}
+			}
+		}
+	}
 }

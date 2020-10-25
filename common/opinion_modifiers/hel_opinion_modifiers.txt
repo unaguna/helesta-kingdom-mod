@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	hel_jap_diplomacy_focus = {
+		value = 15
+	}
+}
