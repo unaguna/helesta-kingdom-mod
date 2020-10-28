@@ -50,6 +50,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			retire_ideology_leader = neutrality
             create_country_leader = {
                 name = "Queen Lize"
                 desc = "POLITICS_LIZE_HELESTA_DESC"
@@ -61,6 +62,155 @@ focus_tree = {
                 }
             }
             remove_ideas = HEL_ichikara_lize
+		}
+	}
+	focus = {
+		id = HEL_via_facsism
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 1
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_dethrone_father
+		}
+
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			retire_ideology_leader = neutrality
+            create_country_leader = {
+                name = "Queen Lize"
+                desc = "POLITICS_LIZE_HELESTA_DESC"
+                picture = "Portrait_Lize_Helesta.dds"
+                expire = "1965.1.1"
+                ideology = fascism_ideology
+                traits = {
+                    #
+                }
+            }
+			set_politics = {
+				ruling_party = fascism
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.5
+			}
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	focus = {
+		id = HEL_for_japan
+		icon = GFX_goal_generic_military_deal
+		x = 13
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_via_facsism
+		}
+		mutually_exclusive = { focus = HEL_against_japan }
+		available = {
+			AND = {
+				country_exists = JAP
+				JAP = { is_puppet = no }
+				NOT = { has_war_with = JAP }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_jap_diplomacy_focus
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_for_qing
+		icon = GFX_goal_generic_military_deal
+		x = 11
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_via_facsism
+		}
+		mutually_exclusive = { focus = HEL_for_japan }
+		available = {
+			AND = {
+				country_exists = MAN
+				NOT = { has_war_with = MAN }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			MAN = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_man_diplomacy_focus
+				}
+			}
 		}
 	}
 }
