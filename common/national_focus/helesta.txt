@@ -213,4 +213,79 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 建築系ツリー
+	focus = {
+		id = HEL_infrastructure_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			# TODO: 暫定
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = HEL_infrastructure1
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				infrastructure > 4
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						infrastructure < 5
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = infrastructure
+						level = 5
+					}
+				}
+			}
+		}
+	}
 }

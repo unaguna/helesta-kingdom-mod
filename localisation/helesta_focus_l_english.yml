@@ -9,3 +9,7 @@
   HEL_for_qing:0 "満州国との友好"
   HEL_for_qing_desc:0 "我が帝国を拡大するうえで、日本は目の上の瘤であり、いずれ衝突は避けられないであろう。そのときに味方にしたい国は..."
   hel_man_diplomacy_focus:0 "ヘルエスタ帝国との友好"
+  HEL_infrastructure_plan:0 "社会資本整備重点計画策定"
+  HEL_infrastructure_plan_desc:0 "国民の安全と発展のためには社会資本が不可欠である。"
+  HEL_infrastructure1:0 "道路整備"
+  HEL_infrastructure1_desc:0 "必要な土地に重点的な道路整備を行うことは、すべての社会資本整備の土台となる最重要課題である。"
