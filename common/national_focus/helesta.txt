@@ -288,4 +288,49 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HEL_air_base1
+		icon = GFX_goal_generic_air_fighter2
+		x = 6
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				air_base > 4
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						air_base < 5
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = air_base
+						level = 5
+					}
+				}
+			}
+		}
+	}
 }

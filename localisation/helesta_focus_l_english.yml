@@ -13,3 +13,5 @@
   HEL_infrastructure_plan_desc:0 "国民の安全と発展のためには社会資本が不可欠である。"
   HEL_infrastructure1:0 "道路整備"
   HEL_infrastructure1_desc:0 "必要な土地に重点的な道路整備を行うことは、すべての社会資本整備の土台となる最重要課題である。"
+  HEL_air_base1:0 "飛行場整備"
+  HEL_air_base1_desc:0 "よく整備された空港は、平時には産業の基盤となり、有事には国土を守る航空部隊の基地となる。"
