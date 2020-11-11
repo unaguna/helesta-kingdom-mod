@@ -386,4 +386,36 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HEL_infrastructure_plan2
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure1
+		}
+		available = {
+			date > 1937.6.1
+			controls_state = 807
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			# TODO: 暫定
+			add_political_power = 120
+		}
+	}
 }
