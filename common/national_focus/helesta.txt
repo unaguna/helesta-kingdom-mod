@@ -333,4 +333,57 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HEL_coastal_bunker1
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				not = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							#limit_to_border = yes
+							limit_to_coastal = yes
+						}
+						building = coastal_bunker
+						level < 5
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			807 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 5
+					}
+				}
+			}
+		}
+	}
 }
