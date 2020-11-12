@@ -473,4 +473,50 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = HEL_infrastructure2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 3
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan2
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				infrastructure > 9
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						infrastructure < 10
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = infrastructure
+						level = 10
+					}
+				}
+			}
+			add_political_power = -50
+		}
+	}
 }
