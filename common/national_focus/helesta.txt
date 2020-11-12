@@ -127,7 +127,7 @@ focus_tree = {
 	focus = {
 		id = HEL_for_japan
 		icon = GFX_goal_generic_military_deal
-		x = 13
+		x = 11
 		y = 2
 		offset = {
 			x = -12
@@ -172,7 +172,7 @@ focus_tree = {
 	focus = {
 		id = HEL_for_qing
 		icon = GFX_goal_generic_military_deal
-		x = 11
+		x = 9
 		y = 2
 		offset = {
 			x = -12
@@ -416,6 +416,61 @@ focus_tree = {
 		completion_reward = {
 			# TODO: 暫定
 			add_political_power = 120
+		}
+	}
+	focus = {
+		id = HEL_bunker1
+		icon = GFX_goal_generic_fortify_city
+		x = 6
+		y = 3
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan2
+		}
+		prerequisite = { 
+			focus = HEL_for_qing
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				not = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 7
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			807 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 7
+					}
+				}
+			}
 		}
 	}
 }
