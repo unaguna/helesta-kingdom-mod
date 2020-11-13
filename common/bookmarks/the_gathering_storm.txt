@@ -160,7 +160,7 @@ bookmarks = {
 		# minors from DLC ####
 		"HEL"={
 			minor = yes
-			history = "TUR_GATHERING_STORM_DESC"
+			history = "HEL_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 			}
