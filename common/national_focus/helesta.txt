@@ -246,8 +246,9 @@ focus_tree = {
 	focus = {
 		id = HEL_infrastructure1
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 4
+		x = 0
 		y = 1
+		relative_position_id = HEL_infrastructure_plan
 
 		cost = 1
 
@@ -291,8 +292,9 @@ focus_tree = {
 	focus = {
 		id = HEL_air_base1
 		icon = GFX_goal_generic_air_fighter2
-		x = 6
+		x = 2
 		y = 1
+		relative_position_id = HEL_infrastructure_plan
 
 		cost = 1
 
@@ -336,8 +338,9 @@ focus_tree = {
 	focus = {
 		id = HEL_coastal_bunker1
 		icon = GFX_goal_generic_fortify_city
-		x = 2
+		x = -2
 		y = 1
+		relative_position_id = HEL_infrastructure_plan
 
 		cost = 1
 
@@ -389,8 +392,9 @@ focus_tree = {
 	focus = {
 		id = HEL_infrastructure_plan2
 		icon = GFX_goal_generic_propaganda
-		x = 4
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = HEL_infrastructure1
 
 		cost = 1
 
@@ -421,8 +425,9 @@ focus_tree = {
 	focus = {
 		id = HEL_bunker1
 		icon = GFX_goal_generic_fortify_city
-		x = 6
-		y = 3
+		x = 2
+		y = 1
+		relative_position_id = HEL_infrastructure_plan2
 
 		cost = 1
 
@@ -476,8 +481,10 @@ focus_tree = {
 	focus = {
 		id = HEL_infrastructure2
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 4
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = HEL_infrastructure_plan2
+
 
 		cost = 1
 
@@ -523,8 +530,9 @@ focus_tree = {
 	focus = {
 		id = HEL_construction_effort
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 2
-		y = 2
+		x = -2
+		y = 1
+		relative_position_id = HEL_infrastructure1
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -597,8 +605,9 @@ focus_tree = {
 	focus = {
 		id = HEL_construction_effort2
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 2
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = HEL_construction_effort
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -672,8 +681,9 @@ focus_tree = {
 		id = HEL_production_effort
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = HEL_construction_effort }
-		x = 0
-		y = 3
+		x = -2
+		y = 1
+		relative_position_id = HEL_construction_effort
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
