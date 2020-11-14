@@ -41,5 +41,8 @@
   HEL_golem_humanoid_desc:0 "我が国は人的資源においてひっ迫している。これを錬金術で解決できるとしたら、これほど素晴らしいことは他にない。"
   HEL_golem_airplane:0 "航空ゴーレム生産法"
   HEL_golem_airplane_desc:0 "ゴーレムは何も人型である必要はない。航空機の姿と動力を持つゴーレムは空軍戦力となるはずだ。"
+  HEL_alchemy_infantry_weapons:0 "歩兵装備錬金生産法"
+  HEL_alchemy_infantry_weapons_desc:0 "いくらゴーレムでも丸腰では敵軍と対等に渡り合えない。錬金術による装備生産を行うことで、次々に生産されるゴーレムを戦場へ投入できるようになる。"
   HEL_can_product_humanoid:0 "ディシジョン『人型ゴーレム生産』が可能になる。"
   HEL_can_product_golem_airplane:0 "ディシジョン『航空ゴーレム生産』が可能になる。"
+  HEL_can_alchemy_infantry_weapons:0 "ディシジョン『歩兵装備錬金生産』が可能になる。"
