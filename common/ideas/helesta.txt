@@ -31,7 +31,7 @@ ideas = {
 				original_tag = "HEL"
 			}
 
-			picture = generic_ar
+			picture = hel_ange_katrina
 
 			available = {
 				has_completed_focus = HEL_devotion_to_alchemy
