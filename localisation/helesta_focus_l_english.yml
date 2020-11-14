@@ -33,3 +33,5 @@
   HEL_production_effort2_desc:0 "民需工場で軍装品を生産させようというのは能率的でない。今は軍需生産に注力すべきだ。"
   HEL_production_effort3:0 "武装化に注力 III"
   HEL_production_effort3_desc:0 "新たな装備の需要を満たすためには、継続した軍需工場拡大の努力が必要である。"
+  HEL_devotion_to_alchemy:0 "錬金術への傾倒"
+  HEL_devotion_to_alchemy_desc:0 "列強諸国が錬金術の研究をやめて久しい。いま我が国が錬金術の研究に注力すれば最先端の技術を取得できるに違いない。"

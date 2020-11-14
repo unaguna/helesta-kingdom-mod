@@ -896,4 +896,29 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 研究ツリー
+	focus = {
+		id = HEL_devotion_to_alchemy
+		icon = GFX_focus_research
+		x = 20
+		y = 0
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
 }
