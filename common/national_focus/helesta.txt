@@ -994,6 +994,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = early_fighter }
+				}
+				set_technology = {
+					early_fighter = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = CAS1 }
+				}
+				set_technology = {
+					CAS1 = 1
+				}
+			}
 			custom_effect_tooltip = HEL_can_product_golem_airplane
 		}
 	}
