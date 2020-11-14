@@ -1,6 +1,6 @@
 HEL_alchemy = {
 
-	HEL_humanoid = {
+	HEL_product_humanoid = {
 
 		icon = generic_military
 

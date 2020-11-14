@@ -1,4 +1,4 @@
 ﻿l_english:
   HEL_alchemy:0 "錬金術"
-  HEL_humanoid:0 "人型ゴーレム生産"
-  HEL_humanoid_desc:0 "錬金術によって生産されたゴーレムは一般兵と同様に戦闘できるであろう。"
+  HEL_product_humanoid:0 "人型ゴーレム生産"
+  HEL_product_humanoid_desc:0 "錬金術によって生産されたゴーレムは一般兵と同様に戦闘できるであろう。"
