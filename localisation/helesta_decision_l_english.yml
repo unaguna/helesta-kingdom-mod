@@ -4,3 +4,5 @@
   HEL_product_humanoid_desc:0 "錬金術によって生産されたゴーレムは一般兵と同様に戦闘できるであろう。"
   HEL_product_golem_airplane:0 "航空ゴーレム生産"
   HEL_product_golem_airplane_desc:0 "錬金術によって生産された航空ゴーレムは近接航空支援機として運用できるだろう。"
+  HEL_dis_alchemy_infantry_weapons:0 "歩兵装備錬金生産"
+  HEL_dis_alchemy_infantry_weapons_desc:0 "錬金術を適切に運用すれば戦いに勝つことは難しいことではない。"
