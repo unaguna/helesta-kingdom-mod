@@ -15,7 +15,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = generic_exploit_mines
+			picture = hel_princess_lize
 
 			modifier = {
 				stability_factor = 0.1
