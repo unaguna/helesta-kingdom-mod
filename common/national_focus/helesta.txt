@@ -921,4 +921,29 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HEL_golem_mass_production
+		icon = GFX_focus_research
+		prerequisite = { focus = HEL_devotion_to_alchemy }
+		x = 0
+		y = 1
+		relative_position_id = HEL_devotion_to_alchemy
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
 }
