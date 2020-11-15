@@ -53,6 +53,8 @@
   HEL_devotion_to_alchemy2_desc:0 "錬金術は一定の成果を収めた。さらなる研究により、錬金術を捨てた世界を完全に置き去りにするだろう。"
   HEL_alchemy_steel:0 "錬金場建設 - 鋼鉄"
   HEL_alchemy_steel_desc:0 "錬金術の原点は金属の錬成にある。現在の技術ならば、専用の儀式場さえあれば継続した鉄の生産が可能である。"
+  HEL_alchemy_oil:0 "錬金場建設 - 石油"
+  HEL_alchemy_oil_desc:0 "化学において固体と液体は状態の差でしかないという。つまりは、固体の錬金も液体の錬金もさほど変わらないということだろう。そして、幸いにも原油がどのようなものであるかは化学の世界で明らかにされている。"
   HEL_can_product_humanoid:0 "ディシジョン『人型ゴーレム生産』が可能になる。"
   HEL_can_product_golem_airplane:0 "ディシジョン『航空ゴーレム生産』が可能になる。"
   HEL_can_alchemy_infantry_weapons:0 "ディシジョン『歩兵装備錬金生産』が可能になる。"
