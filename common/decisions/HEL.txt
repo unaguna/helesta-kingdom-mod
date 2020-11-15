@@ -60,7 +60,11 @@ HEL_alchemy = {
 		complete_effect = {
             add_equipment_to_stockpile = {
                 type = CAS_equipment
-                amount = 500
+                amount = 100
+            }
+            add_equipment_to_stockpile = {
+                type = fighter_equipment
+                amount = 100
             }
 		}
 	}
