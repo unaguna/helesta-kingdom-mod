@@ -901,7 +901,7 @@ focus_tree = {
 	focus = {
 		id = HEL_devotion_to_alchemy
 		icon = GFX_focus_research
-		x = 20
+		x = 25
 		y = 0
 		cost = 1
 
