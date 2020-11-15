@@ -6,3 +6,5 @@
   HEL_product_golem_airplane_desc:0 "錬金術によって生産された航空ゴーレムは近接航空支援機として運用できるだろう。"
   HEL_dis_alchemy_infantry_weapons:0 "歩兵装備錬金生産"
   HEL_dis_alchemy_infantry_weapons_desc:0 "錬金術を適切に運用すれば戦いに勝つことは難しいことではない。"
+  HEL_dis_alchemy_convoys:0 "輸送船錬金生産"
+  HEL_dis_alchemy_convoys_desc:0 "多少大きいものであっても錬金術で作れないことはない。"
