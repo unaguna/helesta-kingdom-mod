@@ -67,7 +67,7 @@ HEL_alchemy = {
 
 	HEL_dis_alchemy_infantry_weapons = {
 
-		icon = generic_air
+		icon = generic_industry
 
 		available = {
             has_completed_focus = HEL_alchemy_infantry_weapons
