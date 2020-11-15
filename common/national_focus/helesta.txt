@@ -1198,7 +1198,7 @@ focus_tree = {
 		relative_position_id = HEL_golem_mass_production
 		cost = 1
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		available_if_capitulated = yes
 
@@ -1229,7 +1229,7 @@ focus_tree = {
 		relative_position_id = HEL_alchemy_steel
 		cost = 1
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		available_if_capitulated = yes
 
