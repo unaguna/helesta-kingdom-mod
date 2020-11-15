@@ -923,7 +923,7 @@ focus_tree = {
 
 	focus = {
 		id = HEL_golem_mass_production
-		icon = GFX_focus_research
+		icon = GFX_focus_usa_build_the_pentagon
 		prerequisite = { focus = HEL_devotion_to_alchemy }
 		x = 0
 		y = 1
@@ -948,7 +948,7 @@ focus_tree = {
 
 	focus = {
 		id = HEL_golem_humanoid
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = HEL_golem_mass_production }
 		x = 0
 		y = 1
@@ -974,7 +974,7 @@ focus_tree = {
 
 	focus = {
 		id = HEL_golem_airplane
-		icon = GFX_goal_continuous_air_production
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = HEL_golem_mass_production }
 		x = 2
 		y = 1
@@ -1059,7 +1059,7 @@ focus_tree = {
 
 	focus = {
 		id = HEL_alchemy_convoys
-		icon = GFX_goal_continuous_air_production
+		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = HEL_golem_mass_production }
 		x = 4
 		y = 1
@@ -1093,7 +1093,7 @@ focus_tree = {
 
 	focus = {
 		id = HEL_alchemy_infantry_weapons
-		icon = GFX_goal_continuous_reduce_training_time
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = HEL_golem_mass_production }
 		x = -2
 		y = 1
