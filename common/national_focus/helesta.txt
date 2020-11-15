@@ -1189,4 +1189,35 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HEL_alchemy_steel
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 8
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+			}
+		}
+	}
+
 }

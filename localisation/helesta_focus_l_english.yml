@@ -51,6 +51,8 @@
   HEL_alchemy_convoys_desc:0 "我が国の発展した錬金術をもってして、海に浮くだけの鉄の塊を作れないはずがあろうか。"
   HEL_devotion_to_alchemy2:0 "錬金術研究促進"
   HEL_devotion_to_alchemy2_desc:0 "錬金術は一定の成果を収めた。さらなる研究により、錬金術を捨てた世界を完全に置き去りにするだろう。"
+  HEL_alchemy_steel:0 "錬金場建設 - 鋼鉄"
+  HEL_alchemy_steel_desc:0 "錬金術の原点は金属の錬成にある。現在の技術ならば、専用の儀式場さえあれば継続した鉄の生産が可能である。"
   HEL_can_product_humanoid:0 "ディシジョン『人型ゴーレム生産』が可能になる。"
   HEL_can_product_golem_airplane:0 "ディシジョン『航空ゴーレム生産』が可能になる。"
   HEL_can_alchemy_infantry_weapons:0 "ディシジョン『歩兵装備錬金生産』が可能になる。"
