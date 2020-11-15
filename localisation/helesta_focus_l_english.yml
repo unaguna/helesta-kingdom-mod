@@ -43,6 +43,8 @@
   HEL_golem_airplane_desc:0 "ゴーレムは何も人型である必要はない。航空機の姿と動力を持つゴーレムは空軍戦力となるはずだ。"
   HEL_alchemy_infantry_weapons:0 "歩兵装備錬金生産法"
   HEL_alchemy_infantry_weapons_desc:0 "いくらゴーレムでも丸腰では敵軍と対等に渡り合えない。錬金術による装備生産を行うことで、次々に生産されるゴーレムを戦場へ投入できるようになる。"
+  HEL_alchemy_infantry_weapons2:0 "歩兵装備改良"
+  HEL_alchemy_infantry_weapons2_desc:0 "錬金術によって歩兵装備の不足の心配はなくなったが、旧式の装備を使い続けていては他国に後れを取ってしまう。錬金術そのものだけでなく、錬金術で作るものについても不断の研究開発を求める。"
   HEL_alchemy_convoys:0 "輸送船錬金生産法"
   HEL_alchemy_convoys_desc:0 "我が国の発展した錬金術をもってして、海に浮くだけの鉄の塊を作れないはずがあろうか。"
   HEL_devotion_to_alchemy2:0 "錬金術研究促進"

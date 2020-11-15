@@ -1091,6 +1091,36 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_alchemy_infantry_weapons2
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = HEL_alchemy_infantry_weapons }
+		x = 0
+		y = 1
+		relative_position_id = HEL_alchemy_infantry_weapons
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
 		id = HEL_devotion_to_alchemy2
 		icon = GFX_focus_research2
 		prerequisite = { focus = HEL_golem_humanoid }
