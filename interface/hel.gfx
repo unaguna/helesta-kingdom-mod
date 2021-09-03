@@ -3,4 +3,8 @@ spriteTypes = {
         name = "GFX_idea_hel_princess_lize"
         texturefile = "gfx/interface/ideas/idea_hel_princess_lize.dds"
     }
+    spriteType = {
+        name = "GFX_idea_hel_ange_katrina"
+        texturefile = "gfx/interface/ideas/idea_hel_ange_katrina.dds"
+    }
 }

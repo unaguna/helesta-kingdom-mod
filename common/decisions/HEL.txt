@@ -1,0 +1,139 @@
+HEL_alchemy = {
+
+	HEL_product_humanoid = {
+
+		icon = generic_military
+
+		available = {
+            has_completed_focus = HEL_golem_humanoid
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 30
+
+		cost = 10
+
+		complete_effect = {
+            add_manpower = 100000
+		}
+	}
+
+	HEL_product_golem_airplane = {
+
+		icon = generic_air
+
+		available = {
+            has_completed_focus = HEL_golem_airplane
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 30
+
+		cost = 10
+
+		complete_effect = {
+            add_equipment_to_stockpile = {
+                type = CAS_equipment
+                amount = 100
+            }
+            add_equipment_to_stockpile = {
+                type = fighter_equipment
+                amount = 100
+            }
+		}
+	}
+
+	HEL_dis_alchemy_infantry_weapons = {
+
+		icon = generic_industry
+
+		available = {
+            has_completed_focus = HEL_alchemy_infantry_weapons
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 30
+
+		cost = 10
+
+		complete_effect = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 5000
+            }
+		}
+	}
+
+	HEL_dis_alchemy_convoys = {
+
+		icon = generic_naval
+
+		available = {
+            has_completed_focus = HEL_alchemy_convoys
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 30
+
+		cost = 10
+
+		complete_effect = {
+            add_equipment_to_stockpile = {
+                type = convoy
+                amount = 20
+            }
+		}
+	}
+}

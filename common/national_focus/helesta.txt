@@ -896,4 +896,359 @@ focus_tree = {
 			}
 		}
 	}
+
+	# 研究ツリー
+	focus = {
+		id = HEL_devotion_to_alchemy
+		icon = GFX_focus_research
+		x = 25
+		y = 0
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEL_golem_mass_production
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = HEL_devotion_to_alchemy }
+		x = 0
+		y = 1
+		relative_position_id = HEL_devotion_to_alchemy
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEL_golem_humanoid
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 0
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HEL_can_product_humanoid
+		}
+	}
+
+	focus = {
+		id = HEL_golem_airplane
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 2
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = early_fighter }
+				}
+				set_technology = {
+					early_fighter = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = fighter1 }
+				}
+				set_technology = {
+					fighter1 = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = CAS1 }
+				}
+				set_technology = {
+					CAS1 = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_product_golem_airplane
+		}
+	}
+
+	focus = {
+		id = HEL_golem_airplane2
+		icon = GFX_goal_continuous_air_production
+		prerequisite = { focus = HEL_golem_airplane }
+		x = 0
+		y = 1
+		relative_position_id = HEL_golem_airplane
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_convoys
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 4
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = convoys }
+				}
+				set_technology = {
+					convoys = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_alchemy_convoys
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_infantry_weapons
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = -2
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = infantry_weapons }
+				}
+				set_technology = {
+					infantry_weapons = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = infantry_weapons1 }
+				}
+				set_technology = {
+					infantry_weapons1 = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_alchemy_infantry_weapons
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_infantry_weapons2
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = HEL_alchemy_infantry_weapons }
+		x = 0
+		y = 1
+		relative_position_id = HEL_alchemy_infantry_weapons
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_devotion_to_alchemy2
+		icon = GFX_focus_research2
+		prerequisite = { focus = HEL_golem_humanoid }
+		x = 0
+		y = 1
+		relative_position_id = HEL_golem_humanoid
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_steel
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 8
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HEL_alchemy_steel }
+		x = 0
+		y = 1
+		relative_position_id = HEL_alchemy_steel
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 50
+				}
+			}
+		}
+	}
+
 }

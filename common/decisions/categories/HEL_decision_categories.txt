@@ -1,0 +1,6 @@
+HEL_alchemy = {
+    icon = generic_formable_nations
+	allowed = {
+		original_tag = HEL
+	}
+}
