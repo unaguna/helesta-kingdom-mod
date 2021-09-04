@@ -77,3 +77,6 @@
   HEL_can_product_golem_airplane:0 "ディシジョン『航空ゴーレム生産』が可能になる。"
   HEL_can_alchemy_infantry_weapons:0 "ディシジョン『歩兵装備錬金生産』が可能になる。"
   HEL_can_alchemy_convoys:0 "ディシジョン『輸送船錬金生産』が可能になる。"
+  HEL_imperial_national_broadcasting:0 "帝国国営放送"
+  HEL_imperial_national_broadcasting_desc:0 "皇宮はまとめあげたものの、臣民は突然王権を掌握した女帝陛下に困惑している。国営放送により女帝陛下御自らの声で臣民へ説明せねばなるまい。"
+

@@ -17,6 +17,43 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
+
+	focus = {
+		id = HEL_imperial_national_broadcasting
+		icon = GFX_goal_generic_radar
+		x = 11
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+            has_country_leader = {
+                name = "Empress Lize"
+            }
+		}
+		
+		bypass = {
+			NOT = { has_idea = HEL_scars_by_coup_idea }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			remove_ideas = HEL_scars_by_coup_idea
+		}
+	}
+
 	focus = {
 		id = HLI_for_japan
 		icon = GFX_goal_generic_military_deal
