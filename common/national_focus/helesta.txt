@@ -94,6 +94,10 @@ focus_tree = {
 				remove_idea = HEL_princessists_idea
 				add_idea = HEL_princessists_force_idea
 			}
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
 		}
 	}
 
@@ -120,6 +124,7 @@ focus_tree = {
                 name = "The King"
                 ruling_only = yes
             }
+			fascism > 0.3
 		}
 		
 		bypass = {
@@ -229,14 +234,6 @@ focus_tree = {
             }
 			set_politics = {
 				ruling_party = fascism
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.5
-			}
-			add_timed_idea = {
-				idea = nationalism
-				days = 720
 			}
 			load_focus_tree = { 
 				tree = hel_imp_focus
