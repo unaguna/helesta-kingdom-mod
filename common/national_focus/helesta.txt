@@ -138,17 +138,18 @@ focus_tree = {
 	focus = {
 		id = HEL_dethrone_father
 		icon = GFX_focus_generic_self_management
-		x = 14
-		y = 0
-		offset = {
-			x = -12
-			y = 0
-		}
+		x = 0
+		y = 1
+		relative_position_id = HEL_intimidate_princess
 
 		cost = 1
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_intimidate_princess
 		}
 
 		available = {
@@ -185,12 +186,9 @@ focus_tree = {
 	focus = {
 		id = HEL_via_facsism
 		icon = GFX_goal_support_fascism
-		x = 10
+		x = 0
 		y = 1
-		offset = {
-			x = -12
-			y = 0
-		}
+		relative_position_id = HEL_dethrone_father
 
 		cost = 1
 
@@ -220,7 +218,7 @@ focus_tree = {
 		completion_reward = {
 			retire_ideology_leader = neutrality
             create_country_leader = {
-                name = "Queen Lize"
+                name = "Empress Lize"
                 desc = "POLITICS_LIZE_HELESTA_DESC"
                 picture = "Portrait_Lize_Helesta.dds"
                 expire = "1965.1.1"
