@@ -30,7 +30,7 @@ focus_tree = {
 		cost = 1
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 
 		mutually_exclusive = { focus = HEL_support_princessists }
