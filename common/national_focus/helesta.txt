@@ -219,6 +219,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_country_flag = HEL_infrastructure_plan_done
 		}
 
 		cancel_if_invalid = yes
@@ -228,6 +229,8 @@ focus_tree = {
 		completion_reward = {
 			# TODO: 暫定
 			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan_done
 		}
 	}
 	focus = {
@@ -398,6 +401,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_country_flag = HEL_infrastructure_plan2_done
 		}
 
 		cancel_if_invalid = yes
@@ -407,6 +411,8 @@ focus_tree = {
 		completion_reward = {
 			# TODO: 暫定
 			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan2_done
 		}
 	}
 	focus = {
