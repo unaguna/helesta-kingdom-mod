@@ -4,6 +4,7 @@ OOB = "HEL_1936"
 
 add_ideas = {
 	HEL_ichikara_lize
+	HEL_princessists_idea
 }
 
 set_technology = {

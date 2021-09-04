@@ -1,4 +1,6 @@
 ﻿l_english:
+  HEL_purge_princessists:0 "皇女派を粛正"
+  HEL_purge_princessists_desc:0 "王家の分裂は国の荒廃を招く。この国の君主は陛下であり皇女殿下ではないのだ。"
   HEL_dethrone_father:0 "父王を廃位せよ"
   HEL_dethrone_father_desc:0 "陛下による治世は安定していた。だがそれは王の資質のみが生み出したものではなく、国際情勢に恵まれていたことによる一時の平穏であることを無視してはならない。再び世界大戦が起きようとしている今、陛下を廃位し、より指導力のある強い王を玉座に据えるべきである。"
   HEL_via_facsism:0 "帝国主義"
