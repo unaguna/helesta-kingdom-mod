@@ -33,6 +33,8 @@ focus_tree = {
 			factor = 1
 		}
 
+		mutually_exclusive = { focus = HEL_support_princessists }
+
 		available = {
 			has_government = neutrality
             has_country_leader = {
@@ -51,6 +53,47 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			remove_ideas = HEL_princessists_idea
+		}
+	}
+	focus = {
+		id = HEL_support_princessists
+		icon = GFX_focus_rom_abdicate
+		x = 14
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = HEL_purge_princessists }
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HEL_princessists_idea
+				add_idea = HEL_princessists_force_idea
+			}
 		}
 	}
 	focus = {
