@@ -81,6 +81,27 @@ ideas = {
 			
 		}
 
+		HEL_scars_by_coup_idea = {
+
+			allowed = {
+				original_tag = HEL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_monarchist_uprising
+
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.2
+			}
+			
+		}
+
 	}
 
 	political_advisor = {
