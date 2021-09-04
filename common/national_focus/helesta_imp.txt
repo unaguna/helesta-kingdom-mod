@@ -18,7 +18,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
 	focus = {
-		id = HEL_for_japan
+		id = HLI_for_japan
 		icon = GFX_goal_generic_military_deal
 		x = 11
 		y = 2
@@ -33,7 +33,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		mutually_exclusive = { focus = HEL_against_japan }
+		mutually_exclusive = { focus = HLI_against_japan }
 		available = {
 			AND = {
 				country_exists = JAP
@@ -60,7 +60,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_for_qing
+		id = HLI_for_qing
 		icon = GFX_goal_generic_military_deal
 		x = 9
 		y = 2
@@ -75,7 +75,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		mutually_exclusive = { focus = HEL_for_japan }
+		mutually_exclusive = { focus = HLI_for_japan }
 		available = {
 			AND = {
 				country_exists = MAN
@@ -103,7 +103,7 @@ focus_tree = {
 
 	# 建築系ツリー
 	focus = {
-		id = HEL_infrastructure_plan
+		id = HLI_infrastructure_plan
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 0
@@ -131,11 +131,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_infrastructure1
+		id = HLI_infrastructure1
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
-		relative_position_id = HEL_infrastructure_plan
+		relative_position_id = HLI_infrastructure_plan
 
 		cost = 1
 
@@ -144,7 +144,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_infrastructure_plan
+			focus = HLI_infrastructure_plan
 		}
 		available = {
 			controls_state = 807
@@ -177,11 +177,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_air_base1
+		id = HLI_air_base1
 		icon = GFX_goal_generic_air_fighter2
 		x = 2
 		y = 1
-		relative_position_id = HEL_infrastructure_plan
+		relative_position_id = HLI_infrastructure_plan
 
 		cost = 1
 
@@ -190,7 +190,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_infrastructure_plan
+			focus = HLI_infrastructure_plan
 		}
 		available = {
 			controls_state = 807
@@ -223,11 +223,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_coastal_bunker1
+		id = HLI_coastal_bunker1
 		icon = GFX_goal_generic_fortify_city
 		x = -2
 		y = 1
-		relative_position_id = HEL_infrastructure_plan
+		relative_position_id = HLI_infrastructure_plan
 
 		cost = 1
 
@@ -236,7 +236,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_infrastructure_plan
+			focus = HLI_infrastructure_plan
 		}
 		available = {
 			controls_state = 807
@@ -277,11 +277,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_infrastructure_plan2
+		id = HLI_infrastructure_plan2
 		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 1
-		relative_position_id = HEL_infrastructure1
+		relative_position_id = HLI_infrastructure1
 
 		cost = 1
 
@@ -290,7 +290,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_infrastructure1
+			focus = HLI_infrastructure1
 		}
 		available = {
 			date > 1937.6.1
@@ -310,11 +310,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_bunker1
+		id = HLI_bunker1
 		icon = GFX_goal_generic_fortify_city
 		x = 2
 		y = 1
-		relative_position_id = HEL_infrastructure_plan2
+		relative_position_id = HLI_infrastructure_plan2
 
 		cost = 1
 
@@ -323,7 +323,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_infrastructure_plan2
+			focus = HLI_infrastructure_plan2
 		}
 		available = {
 			controls_state = 807
@@ -363,11 +363,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_infrastructure2
+		id = HLI_infrastructure2
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
-		relative_position_id = HEL_infrastructure_plan2
+		relative_position_id = HLI_infrastructure_plan2
 
 
 		cost = 1
@@ -377,7 +377,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_infrastructure_plan2
+			focus = HLI_infrastructure_plan2
 		}
 		available = {
 			controls_state = 807
@@ -412,11 +412,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_construction_effort
+		id = HLI_construction_effort
 		icon = GFX_goal_generic_construct_civ_factory
 		x = -2
 		y = 1
-		relative_position_id = HEL_infrastructure1
+		relative_position_id = HLI_infrastructure1
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -424,7 +424,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		prerequisite = { 
-			focus = HEL_infrastructure1
+			focus = HLI_infrastructure1
 		}
 		
 		ai_will_do = {
@@ -487,11 +487,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_construction_effort2
+		id = HLI_construction_effort2
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 1
-		relative_position_id = HEL_construction_effort
+		relative_position_id = HLI_construction_effort
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -499,7 +499,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		prerequisite = { 
-			focus = HEL_construction_effort
+			focus = HLI_construction_effort
 		}
 		
 		ai_will_do = {
@@ -562,12 +562,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_production_effort
+		id = HLI_production_effort
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = HEL_construction_effort }
+		prerequisite = { focus = HLI_construction_effort }
 		x = -2
 		y = 1
-		relative_position_id = HEL_construction_effort
+		relative_position_id = HLI_construction_effort
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -635,12 +635,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_production_effort2
+		id = HLI_production_effort2
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = HEL_production_effort }
+		prerequisite = { focus = HLI_production_effort }
 		x = 0
 		y = 1
-		relative_position_id = HEL_production_effort
+		relative_position_id = HLI_production_effort
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -708,12 +708,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEL_production_effort3
+		id = HLI_production_effort3
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = HEL_production_effort2 }
+		prerequisite = { focus = HLI_production_effort2 }
 		x = 0
 		y = 1
-		relative_position_id = HEL_production_effort2
+		relative_position_id = HLI_production_effort2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -783,7 +783,7 @@ focus_tree = {
 
 	# 研究ツリー
 	focus = {
-		id = HEL_devotion_to_alchemy
+		id = HLI_devotion_to_alchemy
 		icon = GFX_focus_research
 		x = 25
 		y = 0
@@ -806,12 +806,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_golem_mass_production
+		id = HLI_golem_mass_production
 		icon = GFX_focus_usa_build_the_pentagon
-		prerequisite = { focus = HEL_devotion_to_alchemy }
+		prerequisite = { focus = HLI_devotion_to_alchemy }
 		x = 0
 		y = 1
-		relative_position_id = HEL_devotion_to_alchemy
+		relative_position_id = HLI_devotion_to_alchemy
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH  }
@@ -831,12 +831,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_golem_humanoid
+		id = HLI_golem_humanoid
 		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = HEL_golem_mass_production }
+		prerequisite = { focus = HLI_golem_mass_production }
 		x = 0
 		y = 1
-		relative_position_id = HEL_golem_mass_production
+		relative_position_id = HLI_golem_mass_production
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -852,17 +852,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = HEL_can_product_humanoid
+			custom_effect_tooltip = HLI_can_product_humanoid
 		}
 	}
 
 	focus = {
-		id = HEL_golem_airplane
+		id = HLI_golem_airplane
 		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = HEL_golem_mass_production }
+		prerequisite = { focus = HLI_golem_mass_production }
 		x = 2
 		y = 1
-		relative_position_id = HEL_golem_mass_production
+		relative_position_id = HLI_golem_mass_production
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -902,17 +902,17 @@ focus_tree = {
 					CAS1 = 1
 				}
 			}
-			custom_effect_tooltip = HEL_can_product_golem_airplane
+			custom_effect_tooltip = HLI_can_product_golem_airplane
 		}
 	}
 
 	focus = {
-		id = HEL_golem_airplane2
+		id = HLI_golem_airplane2
 		icon = GFX_goal_continuous_air_production
-		prerequisite = { focus = HEL_golem_airplane }
+		prerequisite = { focus = HLI_golem_airplane }
 		x = 0
 		y = 1
-		relative_position_id = HEL_golem_airplane
+		relative_position_id = HLI_golem_airplane
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -942,12 +942,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_alchemy_convoys
+		id = HLI_alchemy_convoys
 		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = HEL_golem_mass_production }
+		prerequisite = { focus = HLI_golem_mass_production }
 		x = 4
 		y = 1
-		relative_position_id = HEL_golem_mass_production
+		relative_position_id = HLI_golem_mass_production
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -971,17 +971,17 @@ focus_tree = {
 					convoys = 1
 				}
 			}
-			custom_effect_tooltip = HEL_can_alchemy_convoys
+			custom_effect_tooltip = HLI_can_alchemy_convoys
 		}
 	}
 
 	focus = {
-		id = HEL_alchemy_infantry_weapons
+		id = HLI_alchemy_infantry_weapons
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = HEL_golem_mass_production }
+		prerequisite = { focus = HLI_golem_mass_production }
 		x = -2
 		y = 1
-		relative_position_id = HEL_golem_mass_production
+		relative_position_id = HLI_golem_mass_production
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1013,17 +1013,17 @@ focus_tree = {
 					infantry_weapons1 = 1
 				}
 			}
-			custom_effect_tooltip = HEL_can_alchemy_infantry_weapons
+			custom_effect_tooltip = HLI_can_alchemy_infantry_weapons
 		}
 	}
 
 	focus = {
-		id = HEL_alchemy_infantry_weapons2
+		id = HLI_alchemy_infantry_weapons2
 		icon = GFX_goal_continuous_reduce_training_time
-		prerequisite = { focus = HEL_alchemy_infantry_weapons }
+		prerequisite = { focus = HLI_alchemy_infantry_weapons }
 		x = 0
 		y = 1
-		relative_position_id = HEL_alchemy_infantry_weapons
+		relative_position_id = HLI_alchemy_infantry_weapons
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1048,12 +1048,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_devotion_to_alchemy2
+		id = HLI_devotion_to_alchemy2
 		icon = GFX_focus_research2
-		prerequisite = { focus = HEL_golem_humanoid }
+		prerequisite = { focus = HLI_golem_humanoid }
 		x = 0
 		y = 1
-		relative_position_id = HEL_golem_humanoid
+		relative_position_id = HLI_golem_humanoid
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1074,12 +1074,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_alchemy_steel
+		id = HLI_alchemy_steel
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = HEL_golem_mass_production }
+		prerequisite = { focus = HLI_golem_mass_production }
 		x = 8
 		y = 1
-		relative_position_id = HEL_golem_mass_production
+		relative_position_id = HLI_golem_mass_production
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1105,12 +1105,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_alchemy_oil
+		id = HLI_alchemy_oil
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = HEL_alchemy_steel }
+		prerequisite = { focus = HLI_alchemy_steel }
 		x = 0
 		y = 1
-		relative_position_id = HEL_alchemy_steel
+		relative_position_id = HLI_alchemy_steel
 		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
