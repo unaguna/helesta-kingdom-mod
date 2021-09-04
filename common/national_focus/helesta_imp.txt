@@ -1,6 +1,6 @@
 
 focus_tree = {
-	id = hel_focus
+	id = hel_imp_focus
 	
 	country = {
 		factor = 0
@@ -18,10 +18,10 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
 	focus = {
-		id = HEL_dethrone_father
-		icon = GFX_focus_generic_self_management
-		x = 14
-		y = 0
+		id = HEL_for_japan
+		icon = GFX_goal_generic_military_deal
+		x = 11
+		y = 2
 		offset = {
 			x = -12
 			y = 0
@@ -33,12 +33,13 @@ focus_tree = {
 			factor = 1
 		}
 
+		mutually_exclusive = { focus = HEL_against_japan }
 		available = {
-			has_government = neutrality
-            has_country_leader = {
-                name = "The King"
-                ruling_only = yes
-            }
+			AND = {
+				country_exists = JAP
+				JAP = { is_puppet = no }
+				NOT = { has_war_with = JAP }
+			}
 		}
 		
 		bypass = {
@@ -50,25 +51,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			retire_ideology_leader = neutrality
-            create_country_leader = {
-                name = "Queen Lize"
-                desc = "POLITICS_LIZE_HELESTA_DESC"
-                picture = "Portrait_Lize_Helesta.dds"
-                expire = "1965.1.1"
-                ideology = despotism
-                traits = {
-                    #
-                }
-            }
-            remove_ideas = HEL_ichikara_lize
+			JAP = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_jap_diplomacy_focus
+				}
+			}
 		}
 	}
 	focus = {
-		id = HEL_via_facsism
-		icon = GFX_goal_support_fascism
-		x = 10
-		y = 1
+		id = HEL_for_qing
+		icon = GFX_goal_generic_military_deal
+		x = 9
+		y = 2
 		offset = {
 			x = -12
 			y = 0
@@ -80,14 +75,11 @@ focus_tree = {
 			factor = 1
 		}
 
-		prerequisite = { 
-			focus = HEL_dethrone_father
-		}
-
+		mutually_exclusive = { focus = HEL_for_japan }
 		available = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
+			AND = {
+				country_exists = MAN
+				NOT = { has_war_with = MAN }
 			}
 		}
 		
@@ -100,31 +92,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			retire_ideology_leader = neutrality
-            create_country_leader = {
-                name = "Queen Lize"
-                desc = "POLITICS_LIZE_HELESTA_DESC"
-                picture = "Portrait_Lize_Helesta.dds"
-                expire = "1965.1.1"
-                ideology = fascism_ideology
-                traits = {
-                    #
-                }
-            }
-			set_politics = {
-				ruling_party = fascism
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.5
-			}
-			add_timed_idea = {
-				idea = nationalism
-				days = 720
-			}
-			load_focus_tree = { 
-				tree = hel_imp_focus
-				keep_completed = yes
+			MAN = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_man_diplomacy_focus
+				}
 			}
 		}
 	}
