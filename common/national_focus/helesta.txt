@@ -18,10 +18,48 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
 	focus = {
-		id = HEL_dethrone_father
-		icon = GFX_focus_generic_self_management
+		id = HEL_purge_princessists
+		icon = GFX_focus_rom_abdicate
+		x = 12
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		mutually_exclusive = { focus = HEL_support_princessists }
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			remove_ideas = HEL_princessists_idea
+		}
+	}
+	focus = {
+		id = HEL_support_princessists
+		icon = GFX_focus_rom_abdicate
 		x = 14
-		y = 0
+		y = 2
 		offset = {
 			x = -12
 			y = 0
@@ -31,6 +69,92 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
+		}
+
+		mutually_exclusive = { focus = HEL_purge_princessists }
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HEL_princessists_idea
+				add_idea = HEL_princessists_force_idea
+			}
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_intimidate_princess
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		relative_position_id = HEL_support_princessists
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_support_princessists
+		}
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+			fascism > 0.3
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_ideas = HEL_ange_katrina_idea
+		}
+	}
+
+	focus = {
+		id = HEL_dethrone_father
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = HEL_intimidate_princess
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_intimidate_princess
 		}
 
 		available = {
@@ -50,59 +174,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			retire_ideology_leader = neutrality
             create_country_leader = {
-                name = "Queen Lize"
-                desc = "POLITICS_LIZE_HELESTA_DESC"
-                picture = "Portrait_Lize_Helesta.dds"
-                expire = "1965.1.1"
-                ideology = despotism
-                traits = {
-                    #
-                }
-            }
-            remove_ideas = HEL_ichikara_lize
-		}
-	}
-	focus = {
-		id = HEL_via_facsism
-		icon = GFX_goal_support_fascism
-		x = 10
-		y = 1
-		offset = {
-			x = -12
-			y = 0
-		}
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		prerequisite = { 
-			focus = HEL_dethrone_father
-		}
-
-		available = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			retire_ideology_leader = neutrality
-            create_country_leader = {
-                name = "Queen Lize"
+                name = "Empress Lize"
                 desc = "POLITICS_LIZE_HELESTA_DESC"
                 picture = "Portrait_Lize_Helesta.dds"
                 expire = "1965.1.1"
@@ -114,102 +187,16 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.5
+			load_focus_tree = { 
+				tree = hel_imp_focus
+				keep_completed = yes
 			}
-			add_timed_idea = {
-				idea = nationalism
-				days = 720
+            remove_ideas = {
+				HEL_ichikara_lize
 			}
-		}
-	}
-	focus = {
-		id = HEL_for_japan
-		icon = GFX_goal_generic_military_deal
-		x = 11
-		y = 2
-		offset = {
-			x = -12
-			y = 0
-		}
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		prerequisite = { 
-			focus = HEL_via_facsism
-		}
-		mutually_exclusive = { focus = HEL_against_japan }
-		available = {
-			AND = {
-				country_exists = JAP
-				JAP = { is_puppet = no }
-				NOT = { has_war_with = JAP }
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			JAP = {
-				add_opinion_modifier = {
-					target = HEL
-					modifier = hel_jap_diplomacy_focus
-				}
-			}
-		}
-	}
-	focus = {
-		id = HEL_for_qing
-		icon = GFX_goal_generic_military_deal
-		x = 9
-		y = 2
-		offset = {
-			x = -12
-			y = 0
-		}
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		prerequisite = { 
-			focus = HEL_via_facsism
-		}
-		mutually_exclusive = { focus = HEL_for_japan }
-		available = {
-			AND = {
-				country_exists = MAN
-				NOT = { has_war_with = MAN }
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			MAN = {
-				add_opinion_modifier = {
-					target = HEL
-					modifier = hel_man_diplomacy_focus
-				}
+			swap_ideas = {
+				remove_idea = HEL_princessists_force_idea
+				add_idea = HEL_scars_by_coup_idea
 			}
 		}
 	}
@@ -232,6 +219,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_country_flag = HEL_infrastructure_plan_done
 		}
 
 		cancel_if_invalid = yes
@@ -241,6 +229,8 @@ focus_tree = {
 		completion_reward = {
 			# TODO: 暫定
 			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan_done
 		}
 	}
 	focus = {
@@ -411,6 +401,7 @@ focus_tree = {
 		}
 		
 		bypass = {
+			has_country_flag = HEL_infrastructure_plan2_done
 		}
 
 		cancel_if_invalid = yes
@@ -420,6 +411,8 @@ focus_tree = {
 		completion_reward = {
 			# TODO: 暫定
 			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan2_done
 		}
 	}
 	focus = {
@@ -437,9 +430,6 @@ focus_tree = {
 
 		prerequisite = { 
 			focus = HEL_infrastructure_plan2
-		}
-		prerequisite = { 
-			focus = HEL_for_qing
 		}
 		available = {
 			controls_state = 807
@@ -892,360 +882,6 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
-				}
-			}
-		}
-	}
-
-	# 研究ツリー
-	focus = {
-		id = HEL_devotion_to_alchemy
-		icon = GFX_focus_research
-		x = 25
-		y = 0
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = HEL_golem_mass_production
-		icon = GFX_focus_usa_build_the_pentagon
-		prerequisite = { focus = HEL_devotion_to_alchemy }
-		x = 0
-		y = 1
-		relative_position_id = HEL_devotion_to_alchemy
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = HEL_golem_humanoid
-		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = HEL_golem_mass_production }
-		x = 0
-		y = 1
-		relative_position_id = HEL_golem_mass_production
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = HEL_can_product_humanoid
-		}
-	}
-
-	focus = {
-		id = HEL_golem_airplane
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = HEL_golem_mass_production }
-		x = 2
-		y = 1
-		relative_position_id = HEL_golem_mass_production
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_tech = early_fighter }
-				}
-				set_technology = {
-					early_fighter = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = { has_tech = fighter1 }
-				}
-				set_technology = {
-					fighter1 = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = { has_tech = CAS1 }
-				}
-				set_technology = {
-					CAS1 = 1
-				}
-			}
-			custom_effect_tooltip = HEL_can_product_golem_airplane
-		}
-	}
-
-	focus = {
-		id = HEL_golem_airplane2
-		icon = GFX_goal_continuous_air_production
-		prerequisite = { focus = HEL_golem_airplane }
-		x = 0
-		y = 1
-		relative_position_id = HEL_golem_airplane
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = light_fighter
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = HEL_alchemy_convoys
-		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = HEL_golem_mass_production }
-		x = 4
-		y = 1
-		relative_position_id = HEL_golem_mass_production
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_tech = convoys }
-				}
-				set_technology = {
-					convoys = 1
-				}
-			}
-			custom_effect_tooltip = HEL_can_alchemy_convoys
-		}
-	}
-
-	focus = {
-		id = HEL_alchemy_infantry_weapons
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = HEL_golem_mass_production }
-		x = -2
-		y = 1
-		relative_position_id = HEL_golem_mass_production
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_tech = infantry_weapons }
-				}
-				set_technology = {
-					infantry_weapons = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = { has_tech = infantry_weapons1 }
-				}
-				set_technology = {
-					infantry_weapons1 = 1
-				}
-			}
-			custom_effect_tooltip = HEL_can_alchemy_infantry_weapons
-		}
-	}
-
-	focus = {
-		id = HEL_alchemy_infantry_weapons2
-		icon = GFX_goal_continuous_reduce_training_time
-		prerequisite = { focus = HEL_alchemy_infantry_weapons }
-		x = 0
-		y = 1
-		relative_position_id = HEL_alchemy_infantry_weapons
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-
-	focus = {
-		id = HEL_devotion_to_alchemy2
-		icon = GFX_focus_research2
-		prerequisite = { focus = HEL_golem_humanoid }
-		x = 0
-		y = 1
-		relative_position_id = HEL_golem_humanoid
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = HEL_alchemy_steel
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = HEL_golem_mass_production }
-		x = 8
-		y = 1
-		relative_position_id = HEL_golem_mass_production
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_resource = {
-					type = steel
-					amount = 30
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = HEL_alchemy_oil
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = HEL_alchemy_steel }
-		x = 0
-		y = 1
-		relative_position_id = HEL_alchemy_steel
-		cost = 1
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1			
-		}
-
-		bypass = {
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_resource = {
-					type = oil
-					amount = 50
 				}
 			}
 		}

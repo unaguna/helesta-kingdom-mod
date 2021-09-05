@@ -1,0 +1,811 @@
+
+focus_tree = {
+	id = hel_imp_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HEL
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = HEL
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	focus = {
+		id = HEL_imperial_national_broadcasting
+		icon = GFX_goal_generic_radar
+		x = 11
+		y = 0
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = fascism
+            has_country_leader = {
+                name = "Empress Lize"
+            }
+		}
+		
+		bypass = {
+			NOT = { has_idea = HEL_scars_by_coup_idea }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			remove_ideas = HEL_scars_by_coup_idea
+		}
+	}
+
+	focus = {
+		id = HLI_for_japan
+		icon = GFX_goal_generic_military_deal
+		x = 11
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = HLI_against_japan }
+		available = {
+			AND = {
+				country_exists = JAP
+				JAP = { is_puppet = no }
+				NOT = { has_war_with = JAP }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_jap_diplomacy_focus
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLI_for_qing
+		icon = GFX_goal_generic_military_deal
+		x = 9
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = HLI_for_japan }
+		available = {
+			AND = {
+				country_exists = MAN
+				NOT = { has_war_with = MAN }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			MAN = {
+				add_opinion_modifier = {
+					target = HEL
+					modifier = hel_man_diplomacy_focus
+				}
+			}
+		}
+	}
+
+	# 建築系ツリー
+	focus = {
+		id = HLI_infrastructure_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			has_country_flag = HEL_infrastructure_plan_done
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			# TODO: 暫定
+			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan_done
+		}
+	}
+	focus = {
+		id = HLI_infrastructure1
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = HLI_infrastructure_plan
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				infrastructure > 4
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						infrastructure < 5
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = infrastructure
+						level = 5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLI_air_base1
+		icon = GFX_goal_generic_air_fighter2
+		x = 2
+		y = 1
+		relative_position_id = HLI_infrastructure_plan
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				air_base > 4
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						air_base < 5
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = air_base
+						level = 5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLI_coastal_bunker1
+		icon = GFX_goal_generic_fortify_city
+		x = -2
+		y = 1
+		relative_position_id = HLI_infrastructure_plan
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				not = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							#limit_to_border = yes
+							limit_to_coastal = yes
+						}
+						building = coastal_bunker
+						level < 5
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			807 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLI_infrastructure_plan2
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = HLI_infrastructure1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure1
+		}
+		available = {
+			date > 1937.6.1
+			controls_state = 807
+		}
+		
+		bypass = {
+			has_country_flag = HEL_infrastructure_plan2_done
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			# TODO: 暫定
+			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan2_done
+		}
+	}
+	focus = {
+		id = HLI_bunker1
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 1
+		relative_position_id = HLI_infrastructure_plan2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure_plan2
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				not = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 7
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			807 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 7
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HLI_infrastructure2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = HLI_infrastructure_plan2
+
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure_plan2
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				infrastructure > 9
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						infrastructure < 10
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = infrastructure
+						level = 10
+					}
+				}
+			}
+			add_political_power = -50
+		}
+	}
+
+	# 研究ツリー
+	focus = {
+		id = HEL_devotion_to_alchemy
+		icon = GFX_focus_research
+		x = 25
+		y = 0
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEL_golem_mass_production
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = HEL_devotion_to_alchemy }
+		x = 0
+		y = 1
+		relative_position_id = HEL_devotion_to_alchemy
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = HEL_golem_humanoid
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 0
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HEL_can_product_humanoid
+		}
+	}
+
+	focus = {
+		id = HEL_golem_airplane
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 2
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = early_fighter }
+				}
+				set_technology = {
+					early_fighter = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = fighter1 }
+				}
+				set_technology = {
+					fighter1 = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = CAS1 }
+				}
+				set_technology = {
+					CAS1 = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_product_golem_airplane
+		}
+	}
+
+	focus = {
+		id = HEL_golem_airplane2
+		icon = GFX_goal_continuous_air_production
+		prerequisite = { focus = HEL_golem_airplane }
+		x = 0
+		y = 1
+		relative_position_id = HEL_golem_airplane
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_convoys
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 4
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = convoys }
+				}
+				set_technology = {
+					convoys = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_alchemy_convoys
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_infantry_weapons
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = -2
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = infantry_weapons }
+				}
+				set_technology = {
+					infantry_weapons = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = infantry_weapons1 }
+				}
+				set_technology = {
+					infantry_weapons1 = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_alchemy_infantry_weapons
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_infantry_weapons2
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = HEL_alchemy_infantry_weapons }
+		x = 0
+		y = 1
+		relative_position_id = HEL_alchemy_infantry_weapons
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_devotion_to_alchemy2
+		icon = GFX_focus_research2
+		prerequisite = { focus = HEL_golem_humanoid }
+		x = 0
+		y = 1
+		relative_position_id = HEL_golem_humanoid
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_steel
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = HEL_golem_mass_production }
+		x = 8
+		y = 1
+		relative_position_id = HEL_golem_mass_production
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HEL_alchemy_steel }
+		x = 0
+		y = 1
+		relative_position_id = HEL_alchemy_steel
+		cost = 1
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 50
+				}
+			}
+		}
+	}
+
+}
