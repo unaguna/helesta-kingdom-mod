@@ -55,6 +55,45 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_create_history_of_japan
+		icon = GFX_focus_attack_japan
+		x = 2
+		y = 1
+		relative_position_id = HEL_imperial_national_broadcasting
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_imperial_national_broadcasting
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_state_claim = 532	# Tokai
+			add_state_claim = 535   # Koshin-etsu
+			add_state_claim = 531   # Kansai
+			add_state_claim = 529   # Chugoku
+			add_state_claim = 530   # Shikoku
+			add_state_claim = 528   # Kyushu
+			# add_state_claim = 526   # Okinawa
+			# add_state_claim = 524   # Taiwan
+		}
+	}
+
+	focus = {
 		id = HLI_for_japan
 		icon = GFX_goal_generic_military_deal
 		x = 11

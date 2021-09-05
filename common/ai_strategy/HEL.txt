@@ -1,0 +1,19 @@
+japan_war_goal = {
+	allowed = {
+		original_tag = HEL
+	}
+	enable = {
+		has_completed_focus = HEL_create_history_of_japan
+		country_exists = JAP
+        JAP = {
+			has_war_with = CHI
+        }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = antagonize
+		id = JAP			
+		value = 200
+	}
+}
