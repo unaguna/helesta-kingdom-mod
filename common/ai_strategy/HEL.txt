@@ -1,4 +1,24 @@
+# 1対1で対日宣戦はしない
 japan_war_goal = {
+	allowed = {
+		original_tag = HEL
+	}
+	enable = {
+        JAP = {
+			has_war = no
+        }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = declare_war
+		id = JAP			
+		value = -500
+	}
+}
+
+# 日本が中国と戦争中の場合、対日
+japan_war_goal2 = {
 	allowed = {
 		original_tag = HEL
 	}
