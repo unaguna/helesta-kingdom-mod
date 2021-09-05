@@ -4,3 +4,10 @@ HEL_alchemy = {
 		original_tag = HEL
 	}
 }
+
+HEL_vs_JAP = {
+    icon = GFX_decision_category_border_war
+	allowed = {
+		original_tag = HEL
+	}
+}
