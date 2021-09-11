@@ -121,6 +121,30 @@ ideas = {
 			
 		}
 
+		HEL_hell_resources_idea = {
+
+			allowed = {
+				original_tag = HEL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_SPR_seize_the_gold_reserves
+
+			modifier = {
+				country_resource_oil = 200
+				country_resource_steel = 200
+				country_resource_aluminium = 200
+				country_resource_rubber = 200
+				country_resource_tungsten = 200
+				country_resource_chromium = 200
+			}
+		}
+
 	}
 
 	political_advisor = {

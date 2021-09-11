@@ -92,5 +92,7 @@
   HEL_hell_factories2:0 "地獄の工場供与2"
   HEL_hell_factories2_desc:0 "『地元』にはまだ工場が余っているという。ならば陛下のために使わせてもらおう。"
   HEL_hell_tank:0 "地獄の戦車技術"
-  main_battle_tank_desc:0 "我が国の戦車技術は遅れている。彼女はそう言って、戦車隊を引き連れてきた。"
+  HEL_hell_tank_desc:0 "我が国の戦車技術は遅れている。彼女はそう言って、戦車隊を引き連れてきた。"
+  HEL_hell_resources:0 "地獄の資源"
+  HEL_hell_resources_desc:0 "彼女の地元では特殊な資源が採掘できるのだそうだ。加工すれば我々の技術でも活用できるようになる。"
   unlock_focuses:0 "§Gこの国家方針はイベントによって自動で達成され、その他の国家方針が解放される。§!"
