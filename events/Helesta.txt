@@ -179,3 +179,26 @@ country_event = {
 		name = helesta.3.a
 	}
 }
+
+# Toko
+country_event = {
+	id = helesta.4
+	title = helesta.4.t
+	desc = helesta.4.desc
+	picture = GFX_report_event_hel_inui_toko
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = HEL
+		has_war = yes
+	}
+	
+	option = {
+		name = helesta.4.a
+
+		ROOT = {
+			add_ideas = HEL_inui_toko_idea
+		}
+	}
+}
