@@ -1,0 +1,11 @@
+﻿l_english:
+  helesta.1.t:0 "[From.GetName]が和平を提案"
+  helesta.1.desc:1 "[From.GetAdjective]政府関係者は和平の提案をしに我々に接近してきた。彼らは即時停戦の見返りに西日本を割譲する。"
+  helesta.1.a:0 "この戦争は勝利に帰した"
+  helesta.1.b:0 "完全な勝利でなければ満足などできない！"
+  helesta.2.t:0 "[From.GetName]が和平を受諾"
+  helesta.2.desc:0 "[From.GetNameDef]が我々の和平の提案を受け入れ、旧領の支配の代償として我々への敵対関係を解消した。"
+  helesta.2.a:0 "奴らは我々を出し抜いた……今のところは"
+  helesta.3.t:0 "[From.GetName]が和平を拒否"
+  helesta.3.desc:0 "[From.GetNameDef]は、無条件降伏を得るまで戦争を継続することを誓い、和平交渉を拒否した。"
+  helesta.3.a:0 "ならば最後まで戦ってやる！"

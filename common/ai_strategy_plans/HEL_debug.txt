@@ -1,0 +1,39 @@
+HEL_debug_plan = {
+	name = "Helesta debugging plan"
+	desc = "Plan for debug"
+
+	allowed = {
+		original_tag = HEL
+	}
+	enable = {
+        is_historical_focus_on = yes
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+        HEL_support_princessists
+        HEL_intimidate_princess
+        HEL_dethrone_father
+        HEL_imperial_national_broadcasting
+        HEL_create_history_of_japan
+	}				
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

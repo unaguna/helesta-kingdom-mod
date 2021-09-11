@@ -79,4 +79,9 @@
   HEL_can_alchemy_convoys:0 "ディシジョン『輸送船錬金生産』が可能になる。"
   HEL_imperial_national_broadcasting:0 "帝国国営放送"
   HEL_imperial_national_broadcasting_desc:0 "皇宮はまとめあげたものの、臣民は突然王権を掌握した女帝陛下に困惑している。国営放送により女帝陛下御自らの声で臣民へ説明せねばなるまい。"
-
+  HEL_create_history_of_japan:0 "西日本を請求"
+  HEL_create_history_of_japan_desc:0 "帝政復古した我が国にとって西日本は回復すべき領土である。" 
+  HEL_create_wargoal_against_japan:0 "旧領奪還"
+  HEL_create_wargoal_against_japan_desc:0 "かつての帝政時代のヘルエスタは広大な領土を有していた。それをいま取り戻すことに何の問題があろうか。"
+  HEL_plan_against_japan:0 "対日戦争計画"
+  HEL_plan_against_japan_desc:0 "相手は列強の一角。準備しすぎるということはない。"
