@@ -85,3 +85,6 @@
   HEL_create_wargoal_against_japan_desc:0 "かつての帝政時代のヘルエスタは広大な領土を有していた。それをいま取り戻すことに何の問題があろうか。"
   HEL_plan_against_japan:0 "対日戦争計画"
   HEL_plan_against_japan_desc:0 "相手は列強の一角。準備しすぎるということはない。"
+  HEL_friendly_hell:0 "地獄との交友"
+  HEL_friendly_hell_desc:0 "女帝陛下の交友関係には驚かされる。地獄から来たという彼女は帝国に何をもたらすだろうか。"
+  unlock_focuses:0 "§Gこの国家方針はイベントによって自動で達成され、その他の国家方針が解放される。§!"

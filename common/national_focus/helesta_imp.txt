@@ -936,4 +936,29 @@ focus_tree = {
 		}
 	}
 
+	# 地獄ツリー
+	focus = {
+		id = HEL_friendly_hell
+		icon = GFX_goal_generic_secret_weapon
+		x = 40
+		y = 0
+		cost = 0
+		
+		available = {
+			hidden_trigger = { has_idea = HEL_inui_toko_idea }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+			has_idea = HEL_inui_toko_idea
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
 }
