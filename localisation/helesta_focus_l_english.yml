@@ -83,3 +83,5 @@
   HEL_create_history_of_japan_desc:0 "帝政復古した我が国にとって西日本は回復すべき領土である。" 
   HEL_create_wargoal_against_japan:0 "旧領奪還"
   HEL_create_wargoal_against_japan_desc:0 "かつての帝政時代のヘルエスタは広大な領土を有していた。それをいま取り戻すことに何の問題があろうか。"
+  HEL_plan_against_japan:0 "対日戦争計画"
+  HEL_plan_against_japan_desc:0 "相手は列強の一角。準備しすぎるということはない。"
