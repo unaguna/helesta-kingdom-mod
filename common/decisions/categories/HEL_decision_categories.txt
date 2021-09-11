@@ -11,3 +11,10 @@ HEL_vs_JAP = {
 		original_tag = HEL
 	}
 }
+
+JAP_vs_HEL = {
+    icon = GFX_decision_category_border_war
+	allowed = {
+		original_tag = JAP
+	}
+}
