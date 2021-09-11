@@ -39,6 +39,25 @@ ideas = {
 			}
 		}
 
+		HEL_inui_toko_idea = {
+			
+			allowed = {
+				original_tag = "HEL"
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = hel_inui_toko
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+			}
+		}
+
 		HEL_princessists_idea = {
 
 			allowed = {
