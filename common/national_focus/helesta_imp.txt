@@ -28,7 +28,7 @@ focus_tree = {
 			y = 0
 		}
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -61,7 +61,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HEL_imperial_national_broadcasting
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -100,7 +100,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -139,7 +139,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -169,98 +169,14 @@ focus_tree = {
 				target = JAP
 				expire = 0
 				generator = {
-					add_state_claim = 532	# Tokai
-					add_state_claim = 535   # Koshin-etsu
-					add_state_claim = 531   # Kansai
-					add_state_claim = 529   # Chugoku
-					add_state_claim = 530   # Shikoku
-					add_state_claim = 528   # Kyushu
-					# add_state_claim = 526   # Okinawa
-					# add_state_claim = 524   # Taiwan
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = HLI_for_japan
-		icon = GFX_goal_generic_military_deal
-		x = 11
-		y = 2
-		offset = {
-			x = -12
-			y = 0
-		}
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		mutually_exclusive = { focus = HLI_against_japan }
-		available = {
-			AND = {
-				country_exists = JAP
-				JAP = { is_puppet = no }
-				NOT = { has_war_with = JAP }
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			JAP = {
-				add_opinion_modifier = {
-					target = HEL
-					modifier = hel_jap_diplomacy_focus
-				}
-			}
-		}
-	}
-	focus = {
-		id = HLI_for_qing
-		icon = GFX_goal_generic_military_deal
-		x = 9
-		y = 2
-		offset = {
-			x = -12
-			y = 0
-		}
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		mutually_exclusive = { focus = HLI_for_japan }
-		available = {
-			AND = {
-				country_exists = MAN
-				NOT = { has_war_with = MAN }
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			MAN = {
-				add_opinion_modifier = {
-					target = HEL
-					modifier = hel_man_diplomacy_focus
+					532	  # Tokai
+					535   # Koshin-etsu
+					531   # Kansai
+					529   # Chugoku
+					530   # Shikoku
+					528   # Kyushu
+					# 526   # Okinawa
+					# 524   # Taiwan
 				}
 			}
 		}
@@ -273,7 +189,7 @@ focus_tree = {
 		x = 4
 		y = 0
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -305,7 +221,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -351,7 +267,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -397,7 +313,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -451,7 +367,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure1
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -487,7 +403,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan2
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -541,7 +457,7 @@ focus_tree = {
 		relative_position_id = HLI_infrastructure_plan2
 
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -588,7 +504,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = 25
 		y = 0
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 		
@@ -613,7 +529,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_devotion_to_alchemy
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 		
@@ -638,7 +554,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -664,7 +580,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -714,7 +630,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_golem_airplane
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -749,7 +665,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -783,7 +699,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -825,7 +741,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_alchemy_infantry_weapons
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -855,7 +771,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_golem_humanoid
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -881,7 +797,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -912,7 +828,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_alchemy_steel
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -932,6 +848,148 @@ focus_tree = {
 					type = oil
 					amount = 50
 				}
+			}
+		}
+	}
+
+	# 地獄ツリー
+	focus = {
+		id = HEL_friendly_hell
+		icon = GFX_goal_generic_secret_weapon
+		x = 40
+		y = 0
+		cost = 0
+		
+		available = {
+			hidden_trigger = { has_idea = HEL_inui_toko_idea }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		bypass = {
+			has_idea = HEL_inui_toko_idea
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = HEL_hell_resources
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HEL_friendly_hell }
+		x = -2
+		y = 1
+		relative_position_id = HEL_friendly_hell
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_ideas = HEL_hell_resources_idea
+		}
+	}
+
+	focus = {
+		id = HEL_hell_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HEL_friendly_hell }
+		x = 0
+		y = 1
+		relative_position_id = HEL_friendly_hell
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 100
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_hell_factories2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HEL_hell_factories }
+		x = 0
+		y = 1
+		relative_position_id = HEL_hell_factories
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 200
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_hell_tank
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = HEL_hell_factories }
+		x = -4
+		y = 1
+		relative_position_id = HEL_hell_factories
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			set_technology = {
+				main_battle_tank = 1
+			}
+			add_equipment_to_stockpile = {
+				type = modern_tank_equipment
+				amount = 1000
+				producer = ROOT
 			}
 		}
 	}
