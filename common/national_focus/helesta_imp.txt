@@ -28,7 +28,7 @@ focus_tree = {
 			y = 0
 		}
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -61,7 +61,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HEL_imperial_national_broadcasting
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -100,7 +100,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -139,7 +139,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -169,14 +169,14 @@ focus_tree = {
 				target = JAP
 				expire = 0
 				generator = {
-					add_state_claim = 532	# Tokai
-					add_state_claim = 535   # Koshin-etsu
-					add_state_claim = 531   # Kansai
-					add_state_claim = 529   # Chugoku
-					add_state_claim = 530   # Shikoku
-					add_state_claim = 528   # Kyushu
-					# add_state_claim = 526   # Okinawa
-					# add_state_claim = 524   # Taiwan
+					532	  # Tokai
+					535   # Koshin-etsu
+					531   # Kansai
+					529   # Chugoku
+					530   # Shikoku
+					528   # Kyushu
+					# 526   # Okinawa
+					# 524   # Taiwan
 				}
 			}
 		}
@@ -189,7 +189,7 @@ focus_tree = {
 		x = 4
 		y = 0
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -221,7 +221,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -267,7 +267,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -313,7 +313,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -367,7 +367,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure1
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -403,7 +403,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = HLI_infrastructure_plan2
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -457,7 +457,7 @@ focus_tree = {
 		relative_position_id = HLI_infrastructure_plan2
 
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -504,7 +504,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = 25
 		y = 0
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 		
@@ -529,7 +529,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_devotion_to_alchemy
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 		
@@ -554,7 +554,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -580,7 +580,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -630,7 +630,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_golem_airplane
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -665,7 +665,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -699,7 +699,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -741,7 +741,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_alchemy_infantry_weapons
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -771,7 +771,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_golem_humanoid
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -797,7 +797,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = HEL_golem_mass_production
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -828,7 +828,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_alchemy_steel
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -884,7 +884,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = HEL_friendly_hell
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -910,7 +910,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_friendly_hell
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -939,7 +939,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HEL_hell_factories
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -968,7 +968,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = HEL_hell_factories
-		cost = 1
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
