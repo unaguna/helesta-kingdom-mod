@@ -96,6 +96,46 @@ focus_tree = {
 	focus = {
 		id = HEL_plan_against_japan
 		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = HEL_ambition_of_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_ambition_of_japan
+		}
+
+		available = {
+			country_exists = JAP
+			NOT = { has_war_with = JAP }
+			NOT = { JAP = { is_puppet_of = ROOT } }
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			# TODO: 暫定
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_ambition_of_japan
+		icon = GFX_goal_generic_propaganda
 		x = 2
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
@@ -113,6 +153,7 @@ focus_tree = {
 		available = {
 			country_exists = JAP
 			NOT = { has_war_with = JAP }
+			NOT = { JAP = { is_puppet_of = ROOT } }
 		}
 		
 		bypass = {
@@ -123,12 +164,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
-			# TODO: 暫定
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			add_war_support = 0.15
 		}
 	}
 
