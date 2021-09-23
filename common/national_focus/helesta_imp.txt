@@ -96,9 +96,9 @@ focus_tree = {
 	focus = {
 		id = HEL_plan_against_japan
 		icon = GFX_goal_generic_position_armies
-		x = 2
+		x = 0
 		y = 1
-		relative_position_id = HEL_create_history_of_japan
+		relative_position_id = HEL_ambition_of_japan
 
 		cost = 10
 
@@ -107,12 +107,13 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_create_history_of_japan
+			focus = HEL_ambition_of_japan
 		}
 
 		available = {
 			country_exists = JAP
 			NOT = { has_war_with = JAP }
+			NOT = { JAP = { is_puppet_of = ROOT } }
 		}
 		
 		bypass = {
@@ -133,9 +134,44 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_ambition_of_japan
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = HEL_create_history_of_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_create_history_of_japan
+		}
+
+		available = {
+			country_exists = JAP
+			NOT = { has_war_with = JAP }
+			NOT = { JAP = { is_puppet_of = ROOT } }
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
 		id = HEL_create_wargoal_against_japan
 		icon = GFX_focus_attack_japan
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
 
@@ -178,6 +214,57 @@ focus_tree = {
 					# 526   # Okinawa
 					# 524   # Taiwan
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_to_eurasia
+		icon = GFX_goal_generic_navy_battleship
+		x = 0
+		y = 3
+		relative_position_id = HEL_create_history_of_japan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_create_history_of_japan
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
 			}
 		}
 	}
