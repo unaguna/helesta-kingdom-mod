@@ -656,7 +656,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = HEL_can_product_humanoid
+			add_ideas = HEL_golem_idea
 		}
 	}
 
