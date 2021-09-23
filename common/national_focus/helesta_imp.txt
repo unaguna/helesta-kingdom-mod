@@ -603,9 +603,11 @@ focus_tree = {
 		}
 
 		bypass = {
+			has_idea = HEL_ange_katrina_idea
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
