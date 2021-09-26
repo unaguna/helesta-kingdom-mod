@@ -970,6 +970,14 @@ focus_tree = {
 					amount = 50
 				}
 			}
+			if = {
+				limit = {
+					NOT = { has_tech = fuel_refining }
+				}
+				set_technology = {
+					fuel_refining = 1
+				}
+			}
 		}
 	}
 
