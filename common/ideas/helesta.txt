@@ -181,7 +181,7 @@ ideas = {
 				has_completed_focus = HEL_devotion_to_alchemy
 			}
 			
-			traits = { compassionate_gentleman }
+			traits = { liver }
 			
 			ai_will_do = {
 				factor = 1
