@@ -1107,6 +1107,32 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_hell_research
+		icon = GFX_focus_research2
+		prerequisite = { focus = HEL_hell_factories2 }
+		x = 0
+		y = 1
+		relative_position_id = HEL_hell_factories2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
 		id = HEL_hell_tank
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = HEL_hell_factories }
