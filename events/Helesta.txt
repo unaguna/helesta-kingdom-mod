@@ -202,3 +202,23 @@ country_event = {
 		}
 	}
 }
+
+# アンジュを逮捕
+country_event = {
+	id = helesta.5
+	title = helesta.5.t
+	desc = helesta.5.desc
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = helesta.5.a
+
+		ROOT = {
+			set_country_flag = HEL_ange_has_been_arrested
+		}
+	}
+}

@@ -136,8 +136,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			# TODO: イベント発生に変更する
-			# add_ideas = HEL_ange_katrina_idea
+			country_event = {
+				id = helesta.5
+				days = 1
+			}
 		}
 	}
 

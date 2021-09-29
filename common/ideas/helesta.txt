@@ -164,6 +164,7 @@ ideas = {
 				has_country_leader = {
 					name = "Lize"
 				}
+				has_country_flag = HEL_ange_has_been_released
 			}
 			
 			traits = { liver }
