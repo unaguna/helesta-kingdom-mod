@@ -22,23 +22,6 @@ ideas = {
 			}
 		}
 
-		HEL_ange_katrina_idea = {
-			
-			allowed = {
-				original_tag = "HEL"
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			picture = hel_ange_katrina
-
-			modifier = {
-			}
-		}
-
 		HEL_inui_toko_idea = {
 			
 			allowed = {
@@ -178,7 +161,9 @@ ideas = {
 			picture = hel_ange_katrina
 
 			available = {
-				has_completed_focus = HEL_devotion_to_alchemy
+				has_country_leader = {
+					name = "Lize"
+				}
 			}
 			
 			traits = { liver }

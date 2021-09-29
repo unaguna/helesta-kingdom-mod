@@ -136,7 +136,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_ideas = HEL_ange_katrina_idea
+			# TODO: イベント発生に変更する
+			# add_ideas = HEL_ange_katrina_idea
 		}
 	}
 
@@ -175,7 +176,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
             create_country_leader = {
-                name = "Empress Lize"
+                name = "Lize"
                 desc = "POLITICS_LIZE_HELESTA_DESC"
                 picture = "Portrait_Lize_Helesta.dds"
                 expire = "1965.1.1"

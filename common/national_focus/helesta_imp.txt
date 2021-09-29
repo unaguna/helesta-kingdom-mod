@@ -37,7 +37,7 @@ focus_tree = {
 		available = {
 			has_government = fascism
             has_country_leader = {
-                name = "Empress Lize"
+                name = "Lize"
             }
 		}
 		
@@ -635,7 +635,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_idea = HEL_ange_katrina_idea
+			has_idea = HEL_ange_katrina
 		}
 
 		completion_reward = {
