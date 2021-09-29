@@ -483,6 +483,38 @@ focus_tree = {
 			set_country_flag = HEL_infrastructure_plan2_done
 		}
 	}
+
+	focus = {
+		id = HLI_university
+		icon = GFX_focus_research
+		x = -2
+		y = 1
+		relative_position_id = HLI_infrastructure_plan2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HLI_infrastructure_plan2
+		}
+		
+		bypass = {
+			has_country_flag = HEL_university_done
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_research_slot = 1
+			set_country_flag = HEL_university_done
+		}
+	}
+
 	focus = {
 		id = HLI_bunker1
 		icon = GFX_goal_generic_fortify_city
@@ -603,9 +635,11 @@ focus_tree = {
 		}
 
 		bypass = {
+			has_idea = HEL_ange_katrina_idea
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -656,7 +690,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = HEL_can_product_humanoid
+			add_ideas = HEL_golem_idea
 		}
 	}
 
@@ -936,6 +970,14 @@ focus_tree = {
 					amount = 50
 				}
 			}
+			if = {
+				limit = {
+					NOT = { has_tech = fuel_refining }
+				}
+				set_technology = {
+					fuel_refining = 1
+				}
+			}
 		}
 	}
 
@@ -1013,7 +1055,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_offsite_building = {
+				type = industrial_complex
+				level = 150
+			}
+			add_offsite_building = {
 				type = arms_factory
+				level = 100
+			}
+			add_offsite_building = {
+				type = dockyard
 				level = 100
 			}
 		}
@@ -1042,9 +1092,43 @@ focus_tree = {
 
 		completion_reward = {
 			add_offsite_building = {
+				type = industrial_complex
+				level = 300
+			}
+			add_offsite_building = {
 				type = arms_factory
 				level = 200
 			}
+			add_offsite_building = {
+				type = dockyard
+				level = 200
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_hell_research
+		icon = GFX_focus_research2
+		prerequisite = { focus = HEL_hell_factories2 }
+		x = 0
+		y = 1
+		relative_position_id = HEL_hell_factories2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 

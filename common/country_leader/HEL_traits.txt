@@ -1,0 +1,8 @@
+leader_traits = {
+
+    liver = {
+		random = no
+		political_power_factor = 0.1
+    }
+
+}

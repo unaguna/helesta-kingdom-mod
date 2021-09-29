@@ -136,12 +136,33 @@ ideas = {
 			picture = GFX_idea_SPR_seize_the_gold_reserves
 
 			modifier = {
-				country_resource_oil = 200
-				country_resource_steel = 200
-				country_resource_aluminium = 200
-				country_resource_rubber = 200
-				country_resource_tungsten = 200
-				country_resource_chromium = 200
+				country_resource_oil = 500
+				country_resource_steel = 500
+				country_resource_aluminium = 500
+				country_resource_rubber = 500
+				country_resource_tungsten = 500
+				country_resource_chromium = 500
+			}
+		}
+
+		HEL_golem_idea = {
+
+			allowed = {
+				original_tag = HEL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = hol_expand_the_colonial_army
+
+			modifier = {
+				weekly_manpower = 2000
+				war_support_factor = 0.15
+				war_stability_factor = 0.50
 			}
 		}
 
@@ -160,7 +181,7 @@ ideas = {
 				has_completed_focus = HEL_devotion_to_alchemy
 			}
 			
-			traits = { compassionate_gentleman }
+			traits = { liver }
 			
 			ai_will_do = {
 				factor = 1
