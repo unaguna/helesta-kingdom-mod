@@ -222,3 +222,23 @@ country_event = {
 		}
 	}
 }
+
+# アンジュを釈放
+country_event = {
+	id = helesta.6
+	title = helesta.6.t
+	desc = helesta.6.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = helesta.6.a
+
+		ROOT = {
+			set_country_flag = HEL_ange_has_been_released
+		}
+	}
+}

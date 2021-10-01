@@ -21,8 +21,10 @@ HEL_ange_doom = {
 		fire_only_once = yes
 
 		complete_effect = {
-			# TODO: イベントの発生に変更する
-			set_country_flag = HEL_ange_has_been_released
+			country_event = {
+				id = helesta.6
+				days = 1
+			}
 		}
 
 	}
