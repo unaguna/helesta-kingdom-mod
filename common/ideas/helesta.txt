@@ -158,6 +158,12 @@ ideas = {
 				original_tag = "HEL"
 			}
 
+			visible = {
+				has_country_leader = {
+					name = "Lize"
+				}
+			}
+
 			picture = hel_ange_katrina
 
 			available = {

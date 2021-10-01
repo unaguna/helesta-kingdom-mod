@@ -15,6 +15,7 @@ HEL_ange_doom = {
 		}
 
 		visible = {
+			has_country_flag = HEL_ange_has_been_arrested
 			NOT = { has_country_flag = HEL_ange_has_been_released }
 		}
 
