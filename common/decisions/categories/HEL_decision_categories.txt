@@ -1,3 +1,13 @@
+HEL_ange_doom = {
+	icon = GFX_decision_generic_arrest
+	allowed = {
+		original_tag = HEL
+
+		# TODO: 有効にする
+		# has_country_flag = HEL_ange_has_been_arrested
+	}
+}
+
 HEL_alchemy = {
     icon = generic_formable_nations
 	allowed = {
