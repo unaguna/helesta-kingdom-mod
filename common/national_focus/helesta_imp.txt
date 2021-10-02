@@ -275,6 +275,57 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HEL_negotiate_with_ussr
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 0
+		y = 1
+		relative_position_id = HEL_to_eurasia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_to_eurasia
+		}
+
+		available = {
+			NOT = { has_war_with = SOV }
+			is_puppet = no
+			num_of_controlled_states > 1
+		}
+		
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = SOV
+				}
+				SOV = { is_puppet_of = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			# TODO: イベント発生にする
+			ROOT = {
+				diplomatic_relation = {
+					country = SOV
+					relation = non_aggression_pact
+					active = yes
+				}
+				transfer_state = 644
+				transfer_state = 562
+				transfer_state = 637
+			}
+		}
+	}
+
 	# 建築系ツリー
 	focus = {
 		id = HLI_infrastructure_plan
