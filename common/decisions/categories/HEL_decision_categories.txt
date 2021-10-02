@@ -1,3 +1,10 @@
+HEL_ange_doom = {
+	icon = GFX_decision_generic_arrest
+	allowed = {
+		original_tag = HEL
+	}
+}
+
 HEL_alchemy = {
     icon = generic_formable_nations
 	allowed = {

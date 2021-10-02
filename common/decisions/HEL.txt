@@ -1,3 +1,37 @@
+HEL_ange_doom = {
+
+	# アンジュを釈放する
+	HEL_release_ange = {
+
+		icon = GFX_decision_generic_decision
+		cost = 75
+
+		available = {
+			has_country_flag = HEL_ange_has_been_arrested
+            has_country_leader = {
+                name = "Lize"
+                ruling_only = yes
+            }
+		}
+
+		visible = {
+			has_country_flag = HEL_ange_has_been_arrested
+			NOT = { has_country_flag = HEL_ange_has_been_released }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = {
+				id = helesta.6
+				days = 1
+			}
+		}
+
+	}
+
+}
+
 HEL_alchemy = {
 
 	HEL_product_golem_airplane = {
