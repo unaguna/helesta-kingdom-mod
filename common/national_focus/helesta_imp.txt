@@ -628,7 +628,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 		
 		available_if_capitulated = yes
-
+		
+		available = {
+			hidden_trigger = { has_idea = HEL_ange_katrina }
+		}
 
 		ai_will_do = {
 			factor = 1			
