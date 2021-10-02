@@ -190,8 +190,14 @@ focus_tree = {
 		}
 		
 		bypass = {
-			NOT = {
-				country_exists = JAP
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				ROOT = {
+					has_war_with = JAP
+				}
+				JAP = { is_puppet_of = ROOT }
 			}
 		}
 
