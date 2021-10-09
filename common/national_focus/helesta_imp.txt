@@ -326,6 +326,51 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HEL_siberia_exercise
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		relative_position_id = HEL_negotiate_with_ussr
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_negotiate_with_ussr
+		}
+
+		available = {
+			has_war = no
+			OR = {
+				has_full_control_of_state = 644
+				has_full_control_of_state = 562
+				has_full_control_of_state = 637
+			}
+		}
+
+		cancel_if_invalid = no
+	
+		cancel = {
+			NOT = {
+				OR = {
+					has_full_control_of_state = 644
+					has_full_control_of_state = 562
+					has_full_control_of_state = 637
+				}
+			}
+		}
+
+		completion_reward = {
+			army_experience = 50
+
+		}
+	}
+
 	# 建築系ツリー
 	focus = {
 		id = HLI_infrastructure_plan
