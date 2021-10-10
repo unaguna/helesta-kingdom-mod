@@ -171,7 +171,7 @@ focus_tree = {
 	focus = {
 		id = HEL_create_wargoal_against_japan
 		icon = GFX_focus_attack_japan
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = HEL_create_history_of_japan
 
@@ -190,8 +190,14 @@ focus_tree = {
 		}
 		
 		bypass = {
-			NOT = {
-				country_exists = JAP
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				ROOT = {
+					has_war_with = JAP
+				}
+				JAP = { is_puppet_of = ROOT }
 			}
 		}
 
@@ -222,8 +228,8 @@ focus_tree = {
 		id = HEL_to_eurasia
 		icon = GFX_goal_generic_navy_battleship
 		x = 0
-		y = 3
-		relative_position_id = HEL_create_history_of_japan
+		y = 2
+		relative_position_id = HEL_create_wargoal_against_japan
 
 		cost = 10
 
@@ -232,7 +238,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_create_history_of_japan
+			focus = HEL_create_wargoal_against_japan
 		}
 
 		available = {
@@ -265,6 +271,208 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_negotiate_with_ussr
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 0
+		y = 1
+		relative_position_id = HEL_to_eurasia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_to_eurasia
+		}
+
+		available = {
+			NOT = { has_war_with = SOV }
+			is_puppet = no
+			num_of_controlled_states > 1
+		}
+		
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = SOV
+				}
+				SOV = { is_puppet_of = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			# TODO: イベント発生にする
+			ROOT = {
+				diplomatic_relation = {
+					country = SOV
+					relation = non_aggression_pact
+					active = yes
+				}
+				transfer_state = 644
+				transfer_state = 562
+				transfer_state = 637
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_siberia_exercise
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		relative_position_id = HEL_negotiate_with_ussr
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_negotiate_with_ussr
+		}
+
+		available = {
+			has_war = no
+			OR = {
+				has_full_control_of_state = 644
+				has_full_control_of_state = 562
+				has_full_control_of_state = 637
+			}
+		}
+
+		cancel_if_invalid = no
+	
+		cancel = {
+			NOT = {
+				OR = {
+					has_full_control_of_state = 644
+					has_full_control_of_state = 562
+					has_full_control_of_state = 637
+				}
+			}
+		}
+
+		completion_reward = {
+			army_experience = 50
+
+		}
+	}
+
+	focus = {
+		id = HEL_siberia_exercise2
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = HEL_siberia_exercise
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_siberia_exercise
+		}
+
+		available = {
+			has_war = no
+			OR = {
+				644 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
+				562 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
+				637 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+	
+		cancel = {
+			AND = {
+				644 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+				562 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+				637 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			army_experience = 50
+			air_experience = 50
+		}
+	}
+
+	focus = {
+		id = HEL_siberia_nuclear_weapons_testing
+		icon = GFX_focus_wonderweapons
+		x = 2
+		y = 1
+		relative_position_id = HEL_negotiate_with_ussr
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_negotiate_with_ussr
+		}
+
+		available = {
+			nuclear_reactor > 0
+			OR = {
+				has_full_control_of_state = 644
+				has_full_control_of_state = 562
+				has_full_control_of_state = 637
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
 			}
 		}
 	}
