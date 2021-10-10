@@ -188,6 +188,32 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		HEL_chaika_blain = {
+			allowed = {
+				original_tag = "HEL"
+			}
+
+			visible = {
+				has_country_leader = {
+					name = "Lize"
+				}
+			}
+
+			picture = hel_chaika_blain
+
+			available = {
+				has_country_leader = {
+					name = "Lize"
+				}
+			}
+			
+			traits = { prince_of_terror }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 }
