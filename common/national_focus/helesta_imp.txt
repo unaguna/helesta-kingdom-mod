@@ -371,6 +371,45 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HEL_siberia_nuclear_weapons_testing
+		icon = GFX_focus_wonderweapons
+		x = 2
+		y = 1
+		relative_position_id = HEL_negotiate_with_ussr
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_negotiate_with_ussr
+		}
+
+		available = {
+			nuclear_reactor > 0
+			OR = {
+				has_full_control_of_state = 644
+				has_full_control_of_state = 562
+				has_full_control_of_state = 637
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
 	# 建築系ツリー
 	focus = {
 		id = HLI_infrastructure_plan
