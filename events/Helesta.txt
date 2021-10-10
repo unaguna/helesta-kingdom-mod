@@ -198,7 +198,7 @@ country_event = {
 		name = helesta.4.a
 
 		ROOT = {
-			add_ideas = HEL_inui_toko_idea
+			set_country_flag = HEL_toko_has_come
 		}
 	}
 }
