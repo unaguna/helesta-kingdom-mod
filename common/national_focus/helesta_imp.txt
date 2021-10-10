@@ -372,6 +372,73 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_siberia_exercise2
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = HEL_siberia_exercise
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_siberia_exercise
+		}
+
+		available = {
+			has_war = no
+			OR = {
+				644 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
+				562 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
+				637 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+	
+		cancel = {
+			AND = {
+				644 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+				562 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+				637 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			army_experience = 50
+			air_experience = 50
+		}
+	}
+
+	focus = {
 		id = HEL_siberia_nuclear_weapons_testing
 		icon = GFX_focus_wonderweapons
 		x = 2
