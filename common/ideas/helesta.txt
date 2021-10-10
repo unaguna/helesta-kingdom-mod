@@ -126,7 +126,6 @@ ideas = {
 			modifier = {
 				weekly_manpower = 2000
 				war_support_factor = 0.15
-				war_stability_factor = 0.50
 			}
 		}
 
