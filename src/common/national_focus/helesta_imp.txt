@@ -262,6 +262,46 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_papua_fuel
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		relative_position_id = HEL_create_wargoal_against_south
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 523  # Papua
+			controls_state = 669  # W-Papua
+		}
+
+		prerequisite = { 
+			focus = HEL_create_wargoal_against_south
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 523  # Papua
+			}
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 669  # W-Papua
+			}
+		}
+	}
+
+	focus = {
 		id = HEL_to_eurasia
 		icon = GFX_goal_generic_navy_battleship
 		x = 0
