@@ -254,6 +254,14 @@ country_event = {
 	
 	option = {
 		name = helesta.7.a
+		ai_chance = {
+			base = 99
+			modifier = {
+				has_war = yes
+				NOT = { has_war_with = FROM }
+				factor = 0
+			}
+		}
 		effect_tooltip = {
 			FROM = {
 				create_wargoal = {
@@ -269,6 +277,9 @@ country_event = {
 	}
 	option = {
 		name = helesta.7.b
+		ai_chance = {
+			base = 1
+		}
 		FROM = {
 			if = {
 				limit = { ROOT = { owns_state = 523 } }
