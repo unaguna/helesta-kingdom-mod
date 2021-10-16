@@ -55,8 +55,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_create_history_of_japan
-		icon = GFX_focus_attack_japan
+		id = HEL_reconquista
+		icon = GFX_goal_generic_more_territorial_claims
 		x = 2
 		y = 1
 		relative_position_id = HEL_imperial_national_broadcasting
@@ -138,7 +138,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		x = -2
 		y = 1
-		relative_position_id = HEL_create_history_of_japan
+		relative_position_id = HEL_reconquista
 
 		cost = 10
 
@@ -147,7 +147,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_create_history_of_japan
+			focus = HEL_reconquista
 		}
 
 		available = {
@@ -173,7 +173,7 @@ focus_tree = {
 		icon = GFX_focus_attack_japan
 		x = 0
 		y = 1
-		relative_position_id = HEL_create_history_of_japan
+		relative_position_id = HEL_reconquista
 
 		cost = 10
 
@@ -182,7 +182,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_create_history_of_japan
+			focus = HEL_reconquista
 		}
 
 		available = {
