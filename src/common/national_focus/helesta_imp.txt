@@ -225,6 +225,43 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_create_wargoal_against_south
+		icon = GFX_focus_jap_strike_south
+		x = 2
+		y = 1
+		relative_position_id = HEL_reconquista
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_reconquista
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 523  # Papua
+						owns_state = 669  # W-Papua
+					}
+				}
+				country_event = {
+					id = helesta.7
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = HEL_to_eurasia
 		icon = GFX_goal_generic_navy_battleship
 		x = 0

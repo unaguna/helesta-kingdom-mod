@@ -242,3 +242,50 @@ country_event = {
 		}
 	}
 }
+
+# パプア最後通牒
+country_event = {
+	id = helesta.7
+	title = helesta.7.t
+	desc = helesta.7.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = helesta.7.a
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT
+					expire = 0
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = helesta.8 }
+		}
+	}
+}
+
+# パプア最後通牒を拒否
+country_event = {
+	id = helesta.8
+	title = helesta.8.t
+	desc = helesta.8.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = helesta.8.a
+		ROOT = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+				expire = 0
+			}
+		}
+	}
+}

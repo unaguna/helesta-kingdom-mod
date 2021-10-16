@@ -90,6 +90,8 @@
   HEL_ambition_of_japan_desc:0 "日本は我が国へ触手を伸ばそうとしている。このことを臣民に繰り返し喧伝することで、国全体が日本との戦争の準備を進められる。"
   HEL_plan_against_japan:0 "対日戦争計画"
   HEL_plan_against_japan_desc:0 "相手は列強の一角。準備しすぎるということはない。"
+  HEL_create_wargoal_against_south:0 "パプアを要求"
+  HEL_create_wargoal_against_south_desc:0 "我々が回復せんとする旧領には東南アジアの島も含まれる。ヨーロッパ諸国に不当に占拠されているパプア島を取り戻すのだ。"
   HEL_to_eurasia:0 "大陸進出の準備"
   HEL_to_eurasia_desc:0 "我々は旧領の領有権を主張しているに過ぎないが、大陸の国家群は我々への警戒を強めている。我々は備えなければならない。"
   HEL_negotiate_with_ussr:0 "ソ連との交渉"
