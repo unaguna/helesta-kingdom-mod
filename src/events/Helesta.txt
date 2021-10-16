@@ -267,6 +267,20 @@ country_event = {
 			country_event = { id = helesta.8 }
 		}
 	}
+	option = {
+		name = helesta.7.b
+		FROM = {
+			if = {
+				limit = { ROOT = { owns_state = 523 } }
+				transfer_state = 523  # Papua
+			}
+			if = {
+				limit = { ROOT = { owns_state = 669 } }
+				transfer_state = 669  # W-Papua
+			}
+			country_event = { id = helesta.9 }
+		}
+	}
 }
 
 # パプア最後通牒を拒否
@@ -287,5 +301,19 @@ country_event = {
 				expire = 0
 			}
 		}
+	}
+}
+
+# パプア最後通牒を受諾
+country_event = {
+	id = helesta.9
+	title = helesta.9.t
+	desc = helesta.9.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = helesta.9.a
 	}
 }
