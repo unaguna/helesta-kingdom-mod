@@ -1201,7 +1201,7 @@ focus_tree = {
 		cost = 0
 		
 		available = {
-			hidden_trigger = { has_idea = HEL_inui_toko_idea }
+			hidden_trigger = { has_idea = HEL_inui_toko }
 		}
 
 		ai_will_do = {
@@ -1209,7 +1209,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_idea = HEL_inui_toko_idea
+			has_idea = HEL_inui_toko
 		}
 
 		completion_reward = {

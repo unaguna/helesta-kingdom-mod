@@ -22,25 +22,6 @@ ideas = {
 			}
 		}
 
-		HEL_inui_toko_idea = {
-			
-			allowed = {
-				original_tag = "HEL"
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			picture = hel_inui_toko
-
-			modifier = {
-				army_attack_factor = 0.1
-				army_speed_factor = 0.1
-			}
-		}
-
 		HEL_princessists_idea = {
 
 			allowed = {
@@ -145,7 +126,6 @@ ideas = {
 			modifier = {
 				weekly_manpower = 2000
 				war_support_factor = 0.15
-				war_stability_factor = 0.50
 			}
 		}
 
@@ -174,6 +154,60 @@ ideas = {
 			}
 			
 			traits = { liver }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		HEL_inui_toko = {
+			
+			allowed = {
+				original_tag = "HEL"
+			}
+
+			visible = {
+				has_country_leader = {
+					name = "Lize"
+				}
+			}
+
+			picture = hel_inui_toko
+
+			available = {
+				has_country_leader = {
+					name = "Lize"
+				}
+				has_country_flag = HEL_toko_has_come
+			}
+			
+			traits = { liver }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		HEL_chaika_blain = {
+			allowed = {
+				original_tag = "HEL"
+			}
+
+			visible = {
+				has_country_leader = {
+					name = "Lize"
+				}
+			}
+
+			picture = hel_chaika_blain
+
+			available = {
+				has_country_leader = {
+					name = "Lize"
+				}
+			}
+			
+			traits = { liver prince_of_terror }
 			
 			ai_will_do = {
 				factor = 1
