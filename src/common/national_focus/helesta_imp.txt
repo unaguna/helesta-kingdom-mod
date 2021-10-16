@@ -96,9 +96,9 @@ focus_tree = {
 	focus = {
 		id = HEL_plan_against_japan
 		icon = GFX_goal_generic_position_armies
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = HEL_ambition_of_japan
+		relative_position_id = HEL_reconquista
 
 		cost = 10
 
@@ -107,7 +107,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_ambition_of_japan
+			focus = HEL_reconquista
 		}
 
 		available = {
@@ -136,7 +136,7 @@ focus_tree = {
 	focus = {
 		id = HEL_ambition_of_japan
 		icon = GFX_goal_generic_propaganda
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = HEL_reconquista
 
@@ -172,7 +172,7 @@ focus_tree = {
 		id = HEL_create_wargoal_against_japan
 		icon = GFX_focus_attack_japan
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = HEL_reconquista
 
 		cost = 10
@@ -227,7 +227,7 @@ focus_tree = {
 	focus = {
 		id = HEL_create_wargoal_against_south
 		icon = GFX_focus_jap_strike_south
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = HEL_reconquista
 
