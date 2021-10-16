@@ -1,0 +1,926 @@
+
+focus_tree = {
+	id = hel_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HEL
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = HEL
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+	focus = {
+		id = HEL_purge_princessists
+		icon = GFX_focus_rom_abdicate
+		x = 12
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		mutually_exclusive = { focus = HEL_support_princessists }
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			remove_ideas = HEL_princessists_idea
+		}
+	}
+	focus = {
+		id = HEL_support_princessists
+		icon = GFX_focus_rom_abdicate
+		x = 14
+		y = 2
+		offset = {
+			x = -12
+			y = 0
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		mutually_exclusive = { focus = HEL_purge_princessists }
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HEL_princessists_idea
+				add_idea = HEL_princessists_force_idea
+			}
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_intimidate_princess
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		relative_position_id = HEL_support_princessists
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_support_princessists
+		}
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+			fascism > 0.3
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = {
+				id = helesta.5
+				days = 1
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_dethrone_father
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = HEL_intimidate_princess
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_intimidate_princess
+		}
+
+		available = {
+			has_government = neutrality
+            has_country_leader = {
+                name = "The King"
+                ruling_only = yes
+            }
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+            create_country_leader = {
+                name = "Lize"
+                desc = "POLITICS_LIZE_HELESTA_DESC"
+                picture = "Portrait_Lize_Helesta.dds"
+                expire = "1965.1.1"
+                ideology = fascism_ideology
+                traits = {
+                    liver
+                }
+            }
+			set_politics = {
+				ruling_party = fascism
+			}
+			load_focus_tree = { 
+				tree = hel_imp_focus
+				keep_completed = yes
+			}
+            remove_ideas = {
+				HEL_ichikara_lize
+			}
+			swap_ideas = {
+				remove_idea = HEL_princessists_force_idea
+				add_idea = HEL_scars_by_coup_idea
+			}
+		}
+	}
+
+	# 建築系ツリー
+	focus = {
+		id = HEL_infrastructure_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			has_country_flag = HEL_infrastructure_plan_done
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			# TODO: 暫定
+			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan_done
+		}
+	}
+	focus = {
+		id = HEL_infrastructure1
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = HEL_infrastructure_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				infrastructure > 4
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						infrastructure < 5
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = infrastructure
+						level = 5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_air_base1
+		icon = GFX_goal_generic_air_fighter2
+		x = 2
+		y = 1
+		relative_position_id = HEL_infrastructure_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				air_base > 4
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						air_base < 5
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = air_base
+						level = 5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_coastal_bunker1
+		icon = GFX_goal_generic_fortify_city
+		x = -2
+		y = 1
+		relative_position_id = HEL_infrastructure_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				not = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							#limit_to_border = yes
+							limit_to_coastal = yes
+						}
+						building = coastal_bunker
+						level < 5
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			807 = {
+				set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 5
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_infrastructure_plan2
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = HEL_infrastructure1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure1
+		}
+		available = {
+			date > 1937.6.1
+			controls_state = 807
+		}
+		
+		bypass = {
+			has_country_flag = HEL_infrastructure_plan2_done
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			# TODO: 暫定
+			add_political_power = 120
+
+			set_country_flag = HEL_infrastructure_plan2_done
+		}
+	}
+	focus = {
+		id = HEL_bunker1
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 1
+		relative_position_id = HEL_infrastructure_plan2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan2
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				not = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 7
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			807 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						level < 7
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_infrastructure2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = HEL_infrastructure_plan2
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_infrastructure_plan2
+		}
+		available = {
+			controls_state = 807
+		}
+		
+		bypass = {
+			807 = {			
+				infrastructure > 9
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			if = {
+				limit = {
+					807 = {			
+						infrastructure < 10
+					}
+				}
+				807 = {
+					set_building_level = {
+						type = infrastructure
+						level = 10
+					}
+				}
+			}
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = HEL_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -2
+		y = 1
+		relative_position_id = HEL_infrastructure1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+		prerequisite = { 
+			focus = HEL_infrastructure1
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_construction_effort2
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = HEL_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+		prerequisite = { 
+			focus = HEL_construction_effort
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+
+	focus = {
+		id = HEL_university
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = HEL_construction_effort2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_construction_effort2
+		}
+		
+		bypass = {
+			has_country_flag = HEL_university_done
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_research_slot = 1
+			set_country_flag = HEL_university_done
+		}
+	}
+
+	focus = {
+		id = HEL_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HEL_construction_effort }
+		x = -2
+		y = 1
+		relative_position_id = HEL_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_production_effort2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HEL_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = HEL_production_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEL_production_effort3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HEL_production_effort2 }
+		x = 0
+		y = 1
+		relative_position_id = HEL_production_effort2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+}
