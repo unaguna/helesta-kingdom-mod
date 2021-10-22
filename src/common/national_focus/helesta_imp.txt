@@ -1200,6 +1200,97 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_upgrade_alchemy
+		icon = GFX_focus_usa_build_the_pentagon
+		prerequisite = { focus = HEL_devotion_to_alchemy2 }
+		x = 0
+		y = 2
+		relative_position_id = HEL_devotion_to_alchemy2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				has_tech = concentrated_industry4
+				has_tech = dispersed_industry4
+			}
+			has_idea = HEL_ange_katrina
+		}
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = upgrade_alchemy
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_nuclear
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = HEL_upgrade_alchemy }
+		x = -2
+		y = 1
+		relative_position_id = HEL_upgrade_alchemy
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+			has_tech = atomic_research
+		}
+
+		completion_reward = {
+			set_technology = {
+				atomic_research = 1
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_golem_humanoid2
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = HEL_upgrade_alchemy }
+		x = 0
+		y = 1
+		relative_position_id = HEL_upgrade_alchemy
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HEL_golem_idea
+				add_idea = HEL_greater_golem_idea
+			}
+		}
+	}
+
+	focus = {
 		id = HEL_alchemy_steel
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = HEL_golem_mass_production }
@@ -1264,6 +1355,38 @@ focus_tree = {
 				}
 				set_technology = {
 					fuel_refining = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_alchemy_steel2
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = HEL_alchemy_oil}
+		prerequisite = { focus = HEL_upgrade_alchemy }
+		x = 0
+		y = 3
+		relative_position_id = HEL_alchemy_oil
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 150
 				}
 			}
 		}
