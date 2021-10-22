@@ -80,6 +80,8 @@
   HEL_can_product_golem_airplane:0 "ディシジョン『航空ゴーレム生産』が可能になる。"
   HEL_can_alchemy_infantry_weapons:0 "ディシジョン『歩兵装備錬金生産』が可能になる。"
   HEL_can_alchemy_convoys:0 "ディシジョン『輸送船錬金生産』が可能になる。"
+  HEL_upgrade_alchemy:0 "錬金術の高効率化"
+  HEL_upgrade_alchemy_desc:0 "錬金術は近代の工業の発展にまだまだついてきていない。より効率よく錬金生産することはたやすく可能になるだろう。"
   HEL_imperial_national_broadcasting:0 "帝国国営放送"
   HEL_imperial_national_broadcasting_desc:0 "皇宮はまとめあげたものの、臣民は突然王権を掌握した女帝陛下に困惑している。国営放送により女帝陛下御自らの声で臣民へ説明せねばなるまい。"
   HEL_reconquista:0 "国土回復運動"
@@ -117,3 +119,4 @@
   HEL_hell_research:0 "地獄の研究機関を拝借"
   HEL_hell_research_desc:0 "彼女に言わせれば、我が国はあらゆる技術において遅れているらしい。彼女が言うのだからそうなのだろう。"
   unlock_focuses:0 "§Gこの国家方針はイベントによって自動で達成され、その他の国家方針が解放される。§!"
+  upgrade_alchemy:0 "錬金術のディシジョンが強化される。"

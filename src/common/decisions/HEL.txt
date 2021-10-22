@@ -61,14 +61,28 @@ HEL_alchemy = {
 		cost = 10
 
 		complete_effect = {
-            add_equipment_to_stockpile = {
-                type = CAS_equipment
-                amount = 100
-            }
-            add_equipment_to_stockpile = {
-                type = fighter_equipment
-                amount = 100
-            }
+			if = {
+				limit = { has_completed_focus = HEL_upgrade_alchemy }
+
+				add_equipment_to_stockpile = {
+					type = CAS_equipment
+					amount = 300
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment
+					amount = 300
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = CAS_equipment
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment
+					amount = 100
+				}
+			}
 		}
 	}
 
@@ -99,10 +113,20 @@ HEL_alchemy = {
 		cost = 10
 
 		complete_effect = {
-            add_equipment_to_stockpile = {
-                type = infantry_equipment
-                amount = 5000
-            }
+			if = {
+				limit = { has_completed_focus = HEL_upgrade_alchemy }
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 25000
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+				}
+			}
 		}
 	}
 
@@ -133,10 +157,20 @@ HEL_alchemy = {
 		cost = 10
 
 		complete_effect = {
-            add_equipment_to_stockpile = {
-                type = convoy
-                amount = 20
-            }
+			if = {
+				limit = { has_completed_focus = HEL_upgrade_alchemy }
+
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 100
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 20
+				}
+			}
 		}
 	}
 }
