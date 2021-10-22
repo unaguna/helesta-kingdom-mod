@@ -16,7 +16,7 @@ HEL_debug_plan = {
         HEL_intimidate_princess
         HEL_dethrone_father
         HEL_imperial_national_broadcasting
-        HEL_create_history_of_japan
+        HEL_reconquista
 	}				
 
 	research = {
