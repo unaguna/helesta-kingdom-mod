@@ -23,7 +23,7 @@ japan_war_goal2 = {
 		original_tag = HEL
 	}
 	enable = {
-		has_completed_focus = HEL_create_history_of_japan
+		has_completed_focus = HEL_reconquista
 		country_exists = JAP
         JAP = {
 			has_war_with = CHI

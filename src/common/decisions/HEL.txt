@@ -161,7 +161,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -172,7 +172,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -223,7 +223,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -234,7 +234,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -276,7 +276,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -287,7 +287,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -329,7 +329,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -340,7 +340,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -382,7 +382,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -393,7 +393,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -435,7 +435,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -446,7 +446,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -488,7 +488,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 
@@ -499,7 +499,7 @@ HEL_vs_JAP = {
 			}
 			ROOT = {
 				# 帝政ルートでのみ可能とするため
-				has_completed_focus = HEL_create_history_of_japan
+				has_completed_focus = HEL_reconquista
 			}
 		}
 

@@ -55,13 +55,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEL_create_history_of_japan
-		icon = GFX_focus_attack_japan
+		id = HEL_reconquista
+		icon = GFX_goal_generic_more_territorial_claims
 		x = 2
 		y = 1
 		relative_position_id = HEL_imperial_national_broadcasting
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -96,9 +96,9 @@ focus_tree = {
 	focus = {
 		id = HEL_plan_against_japan
 		icon = GFX_goal_generic_position_armies
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = HEL_ambition_of_japan
+		relative_position_id = HEL_reconquista
 
 		cost = 10
 
@@ -107,7 +107,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_ambition_of_japan
+			focus = HEL_reconquista
 		}
 
 		available = {
@@ -136,18 +136,18 @@ focus_tree = {
 	focus = {
 		id = HEL_ambition_of_japan
 		icon = GFX_goal_generic_propaganda
-		x = -2
+		x = -1
 		y = 1
-		relative_position_id = HEL_create_history_of_japan
+		relative_position_id = HEL_reconquista
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		prerequisite = { 
-			focus = HEL_create_history_of_japan
+			focus = HEL_reconquista
 		}
 
 		available = {
@@ -172,8 +172,8 @@ focus_tree = {
 		id = HEL_create_wargoal_against_japan
 		icon = GFX_focus_attack_japan
 		x = 0
-		y = 1
-		relative_position_id = HEL_create_history_of_japan
+		y = 2
+		relative_position_id = HEL_reconquista
 
 		cost = 10
 
@@ -182,7 +182,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-			focus = HEL_create_history_of_japan
+			focus = HEL_reconquista
 		}
 
 		available = {
@@ -220,6 +220,83 @@ focus_tree = {
 					# 526   # Okinawa
 					# 524   # Taiwan
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_create_wargoal_against_south
+		icon = GFX_focus_jap_strike_south
+		x = 4
+		y = 1
+		relative_position_id = HEL_reconquista
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		prerequisite = { 
+			focus = HEL_reconquista
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 523  # Papua
+						owns_state = 669  # W-Papua
+					}
+				}
+				country_event = {
+					id = helesta.7
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HEL_papua_fuel
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		relative_position_id = HEL_create_wargoal_against_south
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 523  # Papua
+			controls_state = 669  # W-Papua
+		}
+
+		prerequisite = { 
+			focus = HEL_create_wargoal_against_south
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 523  # Papua
+			}
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 669  # W-Papua
 			}
 		}
 	}
