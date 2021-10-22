@@ -129,6 +129,26 @@ ideas = {
 			}
 		}
 
+		HEL_greater_golem_idea = {
+
+			allowed = {
+				original_tag = HEL
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = hol_expand_the_colonial_army
+
+			modifier = {
+				weekly_manpower = 10000
+				war_support_factor = 0.15
+			}
+		}
+
 	}
 
 	political_advisor = {

@@ -1233,6 +1233,35 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEL_golem_humanoid2
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = HEL_upgrade_alchemy }
+		x = 0
+		y = 1
+		relative_position_id = HEL_upgrade_alchemy
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HEL_golem_idea
+				add_idea = HEL_greater_golem_idea
+			}
+		}
+	}
+
+	focus = {
 		id = HEL_alchemy_steel
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = HEL_golem_mass_production }
