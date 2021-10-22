@@ -1302,6 +1302,38 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HEL_alchemy_steel2
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = HEL_alchemy_oil}
+		prerequisite = { focus = HEL_upgrade_alchemy }
+		x = 0
+		y = 3
+		relative_position_id = HEL_alchemy_oil
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1			
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 150
+				}
+			}
+		}
+	}
+
 	# 地獄ツリー
 	focus = {
 		id = HEL_friendly_hell
