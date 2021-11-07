@@ -191,7 +191,12 @@ country_event = {
 
 	trigger = {
 		original_tag = HEL
-		has_war = yes
+		OR = {
+			has_war = yes
+			any_neighbor_country = {
+				has_war = yes
+			}
+		}
 	}
 	
 	option = {
