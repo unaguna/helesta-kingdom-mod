@@ -1650,11 +1650,15 @@ focus_tree = {
 			set_technology = {
 				main_battle_tank = 1
 			}
+			set_technology = {
+				motorised_infantry = 1
+			}
 			add_equipment_to_stockpile = {
 				type = modern_tank_equipment
 				amount = 1000
 				producer = ROOT
 			}
+			load_oob = HEL_hell_tank
 		}
 	}
 
