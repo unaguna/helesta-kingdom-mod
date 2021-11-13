@@ -1,0 +1,37 @@
+on_actions = {
+    on_weekly_HEL = { 
+
+        # 航空機の錬金生産
+        effect = {
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_golem_airplane
+                    NOT = { has_completed_focus = HEL_upgrade_alchemy }
+                }
+                add_equipment_to_stockpile = {
+                    type = CAS_equipment
+                    amount = 20
+                }
+                add_equipment_to_stockpile = {
+                    type = fighter_equipment
+                    amount = 20
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_golem_airplane
+                    has_completed_focus = HEL_upgrade_alchemy
+                }
+                add_equipment_to_stockpile = {
+                    type = CAS_equipment
+                    amount = 60
+                }
+                add_equipment_to_stockpile = {
+                    type = fighter_equipment
+                    amount = 60
+                }
+            }
+        }
+
+    }
+}

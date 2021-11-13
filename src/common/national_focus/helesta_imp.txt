@@ -1110,6 +1110,7 @@ focus_tree = {
 					CAS1 = 1
 				}
 			}
+			set_country_flag = HEL_alchemy_prod_golem_airplane
 			custom_effect_tooltip = HEL_can_product_golem_airplane
 		}
 	}
