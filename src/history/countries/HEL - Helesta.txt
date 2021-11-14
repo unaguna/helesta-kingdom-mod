@@ -38,6 +38,14 @@ set_variable = { working_alchemist_airplane = 0 }
 # 輸送船団錬金生産に割り当てられている錬金術師
 set_variable = { working_alchemist_convoys = 0 }
 
+# 歩兵ゴーレム錬金生産の研究に必要な錬金術師
+set_variable = { cost_alchemist_study_golem_humanoid = 2 }
+# 歩兵装備錬金生産の研究に必要な錬金術師
+set_variable = { cost_alchemist_study_infantry_weapons = 2 }
+# 航空機錬金生産の研究に必要な錬金術師
+set_variable = { cost_alchemist_study_airplane = 2 }
+# 輸送船団錬金生産の研究に必要な錬金術師
+set_variable = { cost_alchemist_study_convoys = 2 }
 # 歩兵ゴーレム錬金生産に必要な錬金術師
 set_variable = { cost_alchemist_golem_humanoid = 1 }
 # 歩兵装備錬金生産に必要な錬金術師
