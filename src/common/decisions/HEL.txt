@@ -42,6 +42,14 @@ HEL_alchemy = {
 		available = {
             has_completed_focus = HEL_golem_humanoid
 			NOT = { has_country_flag = HEL_alchemy_prod_golem_humanoid }
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_golem_humanoid
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_golem_humanoid
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
@@ -56,6 +64,14 @@ HEL_alchemy = {
 
 		complete_effect = {
 			set_country_flag = HEL_alchemy_prod_golem_humanoid
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_golem_humanoid
+			}
+			add_to_variable = {
+				var = working_alchemist_golem_humanoid
+				value = cost_alchemist_golem_humanoid
+			}
 		}
 	}
 
@@ -81,6 +97,11 @@ HEL_alchemy = {
 
 		complete_effect = {
 			clr_country_flag = HEL_alchemy_prod_golem_humanoid
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_golem_humanoid
+			}
+			set_variable = { working_alchemist_golem_humanoid = 0 }
 		}
 	}
 
@@ -92,6 +113,14 @@ HEL_alchemy = {
 		available = {
             has_completed_focus = HEL_alchemy_infantry_weapons
 			NOT = { has_country_flag = HEL_alchemy_prod_infantry_weapons }
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_infantry_weapons
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_infantry_weapons
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
@@ -106,6 +135,14 @@ HEL_alchemy = {
 
 		complete_effect = {
 			set_country_flag = HEL_alchemy_prod_infantry_weapons
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_infantry_weapons
+			}
+			add_to_variable = {
+				var = working_alchemist_infantry_weapons
+				value = cost_alchemist_infantry_weapons
+			}
 		}
 	}
 
@@ -131,6 +168,11 @@ HEL_alchemy = {
 
 		complete_effect = {
 			clr_country_flag = HEL_alchemy_prod_infantry_weapons
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_infantry_weapons
+			}
+			set_variable = { working_alchemist_infantry_weapons = 0 }
 		}
 	}
 
@@ -142,6 +184,14 @@ HEL_alchemy = {
 		available = {
             has_completed_focus = HEL_golem_airplane
 			NOT = { has_country_flag = HEL_alchemy_prod_golem_airplane }
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_airplane
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_airplane
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
@@ -156,6 +206,14 @@ HEL_alchemy = {
 
 		complete_effect = {
 			set_country_flag = HEL_alchemy_prod_golem_airplane
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_airplane
+			}
+			add_to_variable = {
+				var = working_alchemist_airplane
+				value = cost_alchemist_airplane
+			}
 		}
 	}
 
@@ -181,6 +239,11 @@ HEL_alchemy = {
 
 		complete_effect = {
 			clr_country_flag = HEL_alchemy_prod_golem_airplane
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_airplane
+			}
+			set_variable = { working_alchemist_airplane = 0 }
 		}
 	}
 
@@ -192,6 +255,14 @@ HEL_alchemy = {
 		available = {
             has_completed_focus = HEL_alchemy_convoys
 			NOT = { has_country_flag = HEL_alchemy_prod_convoys }
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_convoys
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_convoys
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
@@ -206,6 +277,14 @@ HEL_alchemy = {
 
 		complete_effect = {
 			set_country_flag = HEL_alchemy_prod_convoys
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_convoys
+			}
+			add_to_variable = {
+				var = working_alchemist_convoys
+				value = cost_alchemist_convoys
+			}
 		}
 	}
 
@@ -231,6 +310,11 @@ HEL_alchemy = {
 
 		complete_effect = {
 			clr_country_flag = HEL_alchemy_prod_convoys
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_convoys
+			}
+			set_variable = { working_alchemist_convoys = 0 }
 		}
 	}
 
