@@ -2,8 +2,6 @@
   HEL_ange_doom:0 "Ange Katrina の命運"
   HEL_release_ange:0 "Ange Katrina を釈放"
   HEL_alchemy:0 "錬金術"
-  HEL_dis_alchemy_convoys:0 "輸送船錬金生産"
-  HEL_dis_alchemy_convoys_desc:0 "多少大きいものであっても錬金術で作れないことはない。"
   HEL_vs_JAP:0 "対日戦争"
   HEL_returns_states_to_JAP:0 "非中核州を日本へ返還"
   HEL_returns_states_to_JAP_desc:0 "我が国が占領している非中核領土を日本へ変換する。"

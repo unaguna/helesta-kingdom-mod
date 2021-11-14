@@ -53,6 +53,27 @@ on_actions = {
                     amount = 60
                 }
             }
+
+            # 輸送船団の錬金生産
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_convoys
+                    NOT = { has_completed_focus = HEL_upgrade_alchemy }
+                }
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 4
+				}
+            }
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_convoys
+                    has_completed_focus = HEL_upgrade_alchemy
+                }
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 20
+				}
         }
 
     }

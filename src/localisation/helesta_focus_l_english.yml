@@ -85,7 +85,7 @@
   HEL_alchemy_nuclear_desc:0 "化学の用語を借りれば、錬金術とは元素を他の元素へ変換する術である。変換時に失われる質量の行方は．．．？"
   HEL_can_product_golem_airplane:0 "航空ゴーレムを錬金生産できるようになる。"
   HEL_can_alchemy_infantry_weapons:0 "歩兵装備を錬金生産できるようになる。"
-  HEL_can_alchemy_convoys:0 "ディシジョン『輸送船錬金生産』が可能になる。"
+  HEL_can_alchemy_convoys:0 "輸送船団を錬金生産できるようになる。"
   HEL_upgrade_alchemy:0 "錬金術の高効率化"
   HEL_upgrade_alchemy_desc:0 "錬金術は近代の工業の発展にまだまだついてきていない。より効率よく錬金生産することはたやすく可能になるだろう。"
   HEL_imperial_national_broadcasting:0 "帝国国営放送"

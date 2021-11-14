@@ -33,50 +33,6 @@ HEL_ange_doom = {
 }
 
 HEL_alchemy = {
-
-	HEL_dis_alchemy_convoys = {
-
-		icon = generic_naval
-
-		available = {
-            has_completed_focus = HEL_alchemy_convoys
-		}
-
-		visible = {
-            has_completed_focus = HEL_devotion_to_alchemy
-		}
-
-		fire_only_once = no
-
-		ai_will_do = {
-			factor = 5
-		}
-		modifier = {
-
-		}
-
-		days_remove = 0
-		days_re_enable = 30
-
-		cost = 10
-
-		complete_effect = {
-			if = {
-				limit = { has_completed_focus = HEL_upgrade_alchemy }
-
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 100
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 20
-				}
-			}
-		}
-	}
 }
 
 HEL_vs_JAP = {

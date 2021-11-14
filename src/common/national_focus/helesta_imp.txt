@@ -1180,6 +1180,7 @@ focus_tree = {
 					convoys = 1
 				}
 			}
+			set_country_flag = HEL_alchemy_prod_convoys
 			custom_effect_tooltip = HEL_can_alchemy_convoys
 		}
 	}
