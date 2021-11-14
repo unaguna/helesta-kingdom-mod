@@ -261,8 +261,6 @@ HEL_alchemy = {
 		icon = generic_military
 
 		available = {
-            has_country_flag = HEL_alchemy_can_prod_golem_humanoid
-			NOT = { has_country_flag = HEL_alchemy_prod_golem_humanoid }
 			custom_trigger_tooltip = {
 				tooltip = HEL_tooltip_enough_alchemist_golem_humanoid
 				check_variable = {
@@ -274,7 +272,7 @@ HEL_alchemy = {
 		}
 
 		visible = {
-            has_completed_focus = HEL_devotion_to_alchemy
+            has_country_flag = HEL_alchemy_can_prod_golem_humanoid
 			NOT = { has_country_flag = HEL_alchemy_prod_golem_humanoid }
 		}
 
@@ -331,8 +329,6 @@ HEL_alchemy = {
 		icon = generic_industry
 
 		available = {
-            has_country_flag = HEL_alchemy_can_prod_infantry_weapons
-			NOT = { has_country_flag = HEL_alchemy_prod_infantry_weapons }
 			custom_trigger_tooltip = {
 				tooltip = HEL_tooltip_enough_alchemist_infantry_weapons
 				check_variable = {
@@ -344,7 +340,7 @@ HEL_alchemy = {
 		}
 
 		visible = {
-            has_completed_focus = HEL_devotion_to_alchemy
+            has_country_flag = HEL_alchemy_can_prod_infantry_weapons
 			NOT = { has_country_flag = HEL_alchemy_prod_infantry_weapons }
 		}
 
@@ -401,8 +397,6 @@ HEL_alchemy = {
 		icon = generic_air
 
 		available = {
-            has_country_flag = HEL_alchemy_can_prod_golem_airplane
-			NOT = { has_country_flag = HEL_alchemy_prod_golem_airplane }
 			custom_trigger_tooltip = {
 				tooltip = HEL_tooltip_enough_alchemist_airplane
 				check_variable = {
@@ -414,7 +408,7 @@ HEL_alchemy = {
 		}
 
 		visible = {
-            has_completed_focus = HEL_devotion_to_alchemy
+            has_country_flag = HEL_alchemy_can_prod_golem_airplane
 			NOT = { has_country_flag = HEL_alchemy_prod_golem_airplane }
 		}
 
@@ -471,8 +465,6 @@ HEL_alchemy = {
 		icon = generic_naval
 
 		available = {
-            has_country_flag = HEL_alchemy_can_prod_convoys
-			NOT = { has_country_flag = HEL_alchemy_prod_convoys }
 			custom_trigger_tooltip = {
 				tooltip = HEL_tooltip_enough_alchemist_convoys
 				check_variable = {
@@ -484,7 +476,7 @@ HEL_alchemy = {
 		}
 
 		visible = {
-            has_completed_focus = HEL_devotion_to_alchemy
+            has_country_flag = HEL_alchemy_can_prod_convoys
 			NOT = { has_country_flag = HEL_alchemy_prod_convoys }
 		}
 
