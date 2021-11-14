@@ -28,7 +28,7 @@ set_popularities = {
 set_convoys = 5
 
 # 空き状態の錬金術師の数
-set_variable = { alchemist_free = 2 }
+set_variable = { alchemist_free = 0 }
 # 歩兵ゴーレム錬金生産に割り当てられている錬金術師
 set_variable = { working_alchemist_golem_humanoid = 0 }
 # 歩兵装備錬金生産に割り当てられている錬金術師

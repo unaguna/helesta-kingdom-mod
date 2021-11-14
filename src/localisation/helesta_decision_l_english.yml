@@ -4,6 +4,7 @@
   HEL_alchemy:0 "錬金術"
   HEL_dis_start_alchemy_golem_humanoid:0 "歩兵ゴーレムの錬金生産を開始"
   HEL_dis_stop_alchemy_golem_humanoid:0 "歩兵ゴーレムの錬金生産を停止"
+  HEL_tooltip_employ_alchemist:0 "錬金術師を $RIGHT|G0$ 人雇用する。"
   HEL_tooltip_enough_alchemist_golem_humanoid:0 "割り当てられる錬金術師が[?cost_alchemist_golem_humanoid]人以上いる。"
   HEL_tooltip_enough_alchemist_infantry_weapons:0 "割り当てられる錬金術師が[?cost_alchemist_infantry_weapons]人以上いる。"
   HEL_tooltip_enough_alchemist_airplane:0 "割り当てられる錬金術師が[?cost_alchemist_airplane]人以上いる。"

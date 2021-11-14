@@ -1035,6 +1035,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_to_variable = {
+				alchemist_free = 2
+				tooltip = HEL_tooltip_employ_alchemist
+			}
 		}
 	}
 
