@@ -1,8 +1,30 @@
 on_actions = {
     on_weekly_HEL = { 
 
-        # 航空機の錬金生産
         effect = {
+            # 歩兵装備の錬金生産
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_infantry_weapons
+                    NOT = { has_completed_focus = HEL_upgrade_alchemy }
+                }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+				}
+            }
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_infantry_weapons
+                    has_completed_focus = HEL_upgrade_alchemy
+                }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+				}
+            }
+            
+            # 航空機の錬金生産
             if = {
                 limit = {
                     has_country_flag = HEL_alchemy_prod_golem_airplane

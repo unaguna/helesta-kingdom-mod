@@ -34,50 +34,6 @@ HEL_ange_doom = {
 
 HEL_alchemy = {
 
-	HEL_dis_alchemy_infantry_weapons = {
-
-		icon = generic_industry
-
-		available = {
-            has_completed_focus = HEL_alchemy_infantry_weapons
-		}
-
-		visible = {
-            has_completed_focus = HEL_devotion_to_alchemy
-		}
-
-		fire_only_once = no
-
-		ai_will_do = {
-			factor = 5
-		}
-		modifier = {
-
-		}
-
-		days_remove = 0
-		days_re_enable = 30
-
-		cost = 10
-
-		complete_effect = {
-			if = {
-				limit = { has_completed_focus = HEL_upgrade_alchemy }
-
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 25000
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 5000
-				}
-			}
-		}
-	}
-
 	HEL_dis_alchemy_convoys = {
 
 		icon = generic_naval

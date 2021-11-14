@@ -2,8 +2,6 @@
   HEL_ange_doom:0 "Ange Katrina の命運"
   HEL_release_ange:0 "Ange Katrina を釈放"
   HEL_alchemy:0 "錬金術"
-  HEL_dis_alchemy_infantry_weapons:0 "歩兵装備錬金生産"
-  HEL_dis_alchemy_infantry_weapons_desc:0 "錬金術を適切に運用すれば戦いに勝つことは難しいことではない。"
   HEL_dis_alchemy_convoys:0 "輸送船錬金生産"
   HEL_dis_alchemy_convoys_desc:0 "多少大きいものであっても錬金術で作れないことはない。"
   HEL_vs_JAP:0 "対日戦争"
