@@ -2,6 +2,22 @@ on_actions = {
     on_weekly_HEL = { 
 
         effect = {
+            # 歩兵ゴーレムの錬金生産
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_golem_humanoid
+                    NOT = { has_completed_focus = HEL_upgrade_alchemy }
+                }
+				add_manpower = 2000
+            }
+            if = {
+                limit = {
+                    has_country_flag = HEL_alchemy_prod_golem_humanoid
+                    has_completed_focus = HEL_upgrade_alchemy
+                }
+				add_manpower = 10000
+            }
+
             # 歩兵装備の錬金生産
             if = {
                 limit = {

@@ -83,6 +83,7 @@
   HEL_alchemy_steel2_desc:0 "火種の絶えない世界において鋼鉄は何よりも重要な資源である。"
   HEL_alchemy_nuclear:0 "錬金術の科学的解釈"
   HEL_alchemy_nuclear_desc:0 "化学の用語を借りれば、錬金術とは元素を他の元素へ変換する術である。変換時に失われる質量の行方は．．．？"
+  HEL_can_product_golem_humanoid:0 "歩兵ゴーレムを生産できるようになる。"
   HEL_can_product_golem_airplane:0 "航空ゴーレムを錬金生産できるようになる。"
   HEL_can_alchemy_infantry_weapons:0 "歩兵装備を錬金生産できるようになる。"
   HEL_can_alchemy_convoys:0 "輸送船団を錬金生産できるようになる。"
