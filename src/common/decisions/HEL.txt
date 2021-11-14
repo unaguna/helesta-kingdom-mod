@@ -74,6 +74,7 @@ HEL_alchemy = {
 				var = alchemist_free
 				value = cost_alchemist_study_golem_humanoid
 			}
+			add_ideas = HEL_golem_idea
 		}
 	}
 

@@ -1046,7 +1046,7 @@ focus_tree = {
 		id = HEL_golem_humanoid
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = HEL_golem_mass_production }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = HEL_golem_mass_production
 		cost = 10
@@ -1055,16 +1055,20 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
+		available = {
+			hidden_trigger = { has_country_flag = HEL_alchemy_can_prod_golem_humanoid }
+		}
 
 		ai_will_do = {
 			factor = 1			
 		}
 
 		bypass = {
+			has_country_flag = HEL_alchemy_can_prod_golem_humanoid
 		}
 
 		completion_reward = {
-			add_ideas = HEL_golem_idea
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -1072,7 +1076,7 @@ focus_tree = {
 		id = HEL_golem_airplane
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = HEL_golem_mass_production }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = HEL_golem_mass_production
 		cost = 10
@@ -1081,15 +1085,20 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
+		available = {
+			hidden_trigger = { has_country_flag = HEL_alchemy_can_prod_golem_airplane }
+		}
 
 		ai_will_do = {
 			factor = 1			
 		}
 
 		bypass = {
+			has_country_flag = HEL_alchemy_can_prod_golem_airplane
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -1132,7 +1141,7 @@ focus_tree = {
 		id = HEL_alchemy_convoys
 		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = HEL_golem_mass_production }
-		x = 4
+		x = 1
 		y = 1
 		relative_position_id = HEL_golem_mass_production
 		cost = 10
@@ -1141,15 +1150,20 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
+		available = {
+			hidden_trigger = { has_country_flag = HEL_alchemy_can_prod_convoys }
+		}
 
 		ai_will_do = {
 			factor = 1			
 		}
 
 		bypass = {
+			has_country_flag = HEL_alchemy_can_prod_convoys
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -1157,7 +1171,7 @@ focus_tree = {
 		id = HEL_alchemy_infantry_weapons
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = HEL_golem_mass_production }
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = HEL_golem_mass_production
 		cost = 10
@@ -1166,15 +1180,20 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
+		available = {
+			hidden_trigger = { has_country_flag = HEL_alchemy_can_prod_infantry_weapons }
+		}
 
 		ai_will_do = {
 			factor = 1			
 		}
 
 		bypass = {
+			has_country_flag = HEL_alchemy_can_prod_infantry_weapons
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -1211,10 +1230,15 @@ focus_tree = {
 	focus = {
 		id = HEL_devotion_to_alchemy2
 		icon = GFX_focus_research2
-		prerequisite = { focus = HEL_golem_humanoid }
+		prerequisite = {
+			focus = HEL_golem_humanoid
+			focus = HEL_alchemy_infantry_weapons
+			focus = HEL_alchemy_convoys
+			focus = HEL_golem_airplane
+		}
 		x = 0
-		y = 1
-		relative_position_id = HEL_golem_humanoid
+		y = 3
+		relative_position_id = HEL_golem_mass_production
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1231,6 +1255,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
+			add_to_variable = {
+				alchemist_free = 1
+				tooltip = HEL_tooltip_employ_alchemist
+			}
 		}
 	}
 
@@ -1239,7 +1267,7 @@ focus_tree = {
 		icon = GFX_focus_usa_build_the_pentagon
 		prerequisite = { focus = HEL_devotion_to_alchemy2 }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = HEL_devotion_to_alchemy2
 		cost = 10
 
