@@ -34,6 +34,106 @@ HEL_ange_doom = {
 
 HEL_alchemy = {
 
+	# 歩兵装備の錬金生産を開始
+	HEL_dis_start_alchemy_infantry_weapons = {
+
+		icon = generic_industry
+
+		available = {
+            has_completed_focus = HEL_alchemy_infantry_weapons
+			NOT = { has_country_flag = HEL_alchemy_prod_infantry_weapons }
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			NOT = { has_country_flag = HEL_alchemy_prod_infantry_weapons }
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = HEL_alchemy_prod_infantry_weapons
+		}
+	}
+
+	# 歩兵装備の錬金生産を修了
+	HEL_dis_stop_alchemy_infantry_weapons = {
+
+		icon = generic_industry
+
+		available = {
+            has_completed_focus = HEL_alchemy_infantry_weapons
+			has_country_flag = HEL_alchemy_prod_infantry_weapons
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			has_country_flag = HEL_alchemy_prod_infantry_weapons
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			clr_country_flag = HEL_alchemy_prod_infantry_weapons
+		}
+	}
+
+	# 航空機の錬金生産を開始
+	HEL_dis_start_alchemy_airplane = {
+
+		icon = generic_air
+
+		available = {
+            has_completed_focus = HEL_golem_airplane
+			NOT = { has_country_flag = HEL_alchemy_prod_golem_airplane }
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			NOT = { has_country_flag = HEL_alchemy_prod_golem_airplane }
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = HEL_alchemy_prod_golem_airplane
+		}
+	}
+
+	# 航空機の錬金生産を修了
+	HEL_dis_stop_alchemy_airplane = {
+
+		icon = generic_air
+
+		available = {
+            has_completed_focus = HEL_golem_airplane
+			has_country_flag = HEL_alchemy_prod_golem_airplane
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			has_country_flag = HEL_alchemy_prod_golem_airplane
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			clr_country_flag = HEL_alchemy_prod_golem_airplane
+		}
+	}
+
 	# 輸送船団の錬金生産を開始
 	HEL_dis_start_alchemy_convoys = {
 

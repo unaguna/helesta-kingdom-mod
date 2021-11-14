@@ -27,6 +27,8 @@ set_popularities = {
 
 set_convoys = 5
 
+set_variable = { alchemist = 10 }
+
 # The father of Lize
 create_country_leader = {
 	name = "The King"
