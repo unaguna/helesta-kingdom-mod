@@ -58,7 +58,7 @@ HEL_alchemy = {
 
 		fire_only_once = no
 
-		days_remove = 14
+		days_remove = 70
 		days_re_enable = 0
 
 		complete_effect = {
@@ -102,7 +102,7 @@ HEL_alchemy = {
 
 		fire_only_once = no
 
-		days_remove = 14
+		days_remove = 70
 		days_re_enable = 0
 
 		complete_effect = {
@@ -161,7 +161,7 @@ HEL_alchemy = {
 
 		fire_only_once = no
 
-		days_remove = 14
+		days_remove = 70
 		days_re_enable = 0
 
 		complete_effect = {
@@ -228,7 +228,7 @@ HEL_alchemy = {
 
 		fire_only_once = no
 
-		days_remove = 14
+		days_remove = 70
 		days_re_enable = 0
 
 		complete_effect = {
