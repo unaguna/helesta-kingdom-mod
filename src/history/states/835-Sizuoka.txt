@@ -1,7 +1,7 @@
 
 state={
-	id=807
-	name="STATE_807" # Sizuoka (HEL)
+	id=835
+	name="STATE_835" # Sizuoka (HEL)
 	manpower = 6174000
 	state_category = large_city
 
