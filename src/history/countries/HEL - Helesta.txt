@@ -27,6 +27,10 @@ set_popularities = {
 
 set_convoys = 5
 
+recruit_character = HEL_ange_katrina
+recruit_character = HEL_inui_toko
+recruit_character = HEL_chaika_blain
+
 # 空き状態の錬金術師の数
 set_variable = { alchemist_free = 0 }
 # 歩兵ゴーレム錬金生産に割り当てられている錬金術師

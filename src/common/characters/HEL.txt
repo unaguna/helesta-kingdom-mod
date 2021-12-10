@@ -1,0 +1,93 @@
+characters={
+    HEL_ange_katrina = {
+        name=HEL_ange_katrina
+		portraits={
+			army={
+				small="GFX_idea_hel_ange_katrina"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = ange_katrina
+			ledger = army
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = {
+                    name = "Lize"
+                }
+            }
+            available = {
+                has_country_leader = {
+                    name = "Lize"
+                }
+                has_country_flag = HEL_ange_has_been_released
+            }
+            research_bonus = {
+                nuclear = 0.2
+            }
+			traits = { liver alchemist_1 }
+		}
+    }
+
+    HEL_inui_toko = {
+        name=HEL_inui_toko
+		portraits={
+			army={
+				small="GFX_idea_hel_inui_toko"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = inui_toko
+			ledger = army
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = {
+                    name = "Lize"
+                }
+            }
+            available = {
+                has_country_leader = {
+                    name = "Lize"
+                }
+                has_country_flag = HEL_toko_has_come
+            }
+			traits = { liver }
+		}
+    }
+
+    HEL_chaika_blain = {
+        name=HEL_chaika_blain
+		portraits={
+			army={
+				small="GFX_idea_hel_chaika_blain"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = inui_toko
+			ledger = army
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = {
+                    name = "Lize"
+                }
+            }
+            available = {
+                has_country_leader = {
+                    name = "Lize"
+                }
+            }
+			traits = { liver prince_of_terror }
+		}
+    }
+}
