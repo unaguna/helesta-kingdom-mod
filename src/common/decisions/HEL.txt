@@ -34,145 +34,499 @@ HEL_ange_doom = {
 
 HEL_alchemy = {
 
-	HEL_product_golem_airplane = {
+	# 歩兵ゴーレムの錬金生産を研究
+	HEL_dis_study_alchemy_golem_humanoid = {
 
-		icon = generic_air
+		icon = generic_military
 
 		available = {
-            has_completed_focus = HEL_golem_airplane
+            has_completed_focus = HEL_devotion_to_alchemy
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_study_golem_humanoid
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_study_golem_humanoid
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
             has_completed_focus = HEL_devotion_to_alchemy
+			NOT = { has_country_flag = HEL_alchemy_can_prod_golem_humanoid }
 		}
 
 		fire_only_once = no
 
-		ai_will_do = {
-			factor = 5
-		}
-		modifier = {
-
-		}
-
-		days_remove = 0
-		days_re_enable = 30
-
-		cost = 10
+		days_remove = 70
+		days_re_enable = 0
 
 		complete_effect = {
-			if = {
-				limit = { has_completed_focus = HEL_upgrade_alchemy }
-
-				add_equipment_to_stockpile = {
-					type = CAS_equipment
-					amount = 300
-				}
-				add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 300
-				}
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_golem_humanoid
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = CAS_equipment
-					amount = 100
-				}
-				add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 100
-				}
+		}
+		remove_effect = {
+			custom_effect_tooltip = HEL_can_product_golem_humanoid
+			set_country_flag = HEL_alchemy_can_prod_golem_humanoid
+			add_to_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_golem_humanoid
 			}
+			add_ideas = HEL_golem_idea
 		}
 	}
 
-	HEL_dis_alchemy_infantry_weapons = {
+	# 歩兵装備の錬金生産を研究
+	HEL_dis_study_alchemy_infantry_weapons = {
 
 		icon = generic_industry
 
 		available = {
-            has_completed_focus = HEL_alchemy_infantry_weapons
+            has_completed_focus = HEL_devotion_to_alchemy
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_study_infantry_weapons
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_study_infantry_weapons
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
             has_completed_focus = HEL_devotion_to_alchemy
+			NOT = { has_country_flag = HEL_alchemy_can_prod_infantry_weapons }
 		}
 
 		fire_only_once = no
 
-		ai_will_do = {
-			factor = 5
-		}
-		modifier = {
-
-		}
-
-		days_remove = 0
-		days_re_enable = 30
-
-		cost = 10
+		days_remove = 70
+		days_re_enable = 0
 
 		complete_effect = {
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_infantry_weapons
+			}
+		}
+		remove_effect = {
 			if = {
-				limit = { has_completed_focus = HEL_upgrade_alchemy }
-
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 25000
+				limit = {
+					NOT = { has_tech = infantry_weapons }
+				}
+				set_technology = {
+					infantry_weapons = 1
 				}
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 5000
+			if = {
+				limit = {
+					NOT = { has_tech = infantry_weapons1 }
 				}
+				set_technology = {
+					infantry_weapons1 = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_alchemy_infantry_weapons
+			set_country_flag = HEL_alchemy_can_prod_infantry_weapons
+			add_to_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_infantry_weapons
 			}
 		}
 	}
 
-	HEL_dis_alchemy_convoys = {
+	# 航空機の錬金生産を研究
+	HEL_dis_study_alchemy_airplane = {
+
+		icon = generic_air
+
+		available = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_study_airplane
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_study_airplane
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			NOT = { has_country_flag = HEL_alchemy_can_prod_golem_airplane }
+		}
+
+		fire_only_once = no
+
+		days_remove = 70
+		days_re_enable = 0
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_airplane
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_tech = early_fighter }
+				}
+				set_technology = {
+					early_fighter = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = fighter1 }
+				}
+				set_technology = {
+					fighter1 = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = CAS1 }
+				}
+				set_technology = {
+					CAS1 = 1
+				}
+			}
+			custom_effect_tooltip = HEL_can_product_golem_airplane
+			set_country_flag = HEL_alchemy_can_prod_golem_airplane
+			add_to_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_airplane
+			}
+		}
+	}
+
+	# 輸送船団の錬金生産を研究
+	HEL_dis_study_alchemy_convoys = {
 
 		icon = generic_naval
 
 		available = {
-            has_completed_focus = HEL_alchemy_convoys
+            has_completed_focus = HEL_devotion_to_alchemy
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_study_convoys
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_study_convoys
+					compare = greater_than_or_equals
+				}
+			}
 		}
 
 		visible = {
             has_completed_focus = HEL_devotion_to_alchemy
+			NOT = { has_country_flag = HEL_alchemy_can_prod_convoys }
 		}
 
 		fire_only_once = no
 
-		ai_will_do = {
-			factor = 5
-		}
-		modifier = {
-
-		}
-
-		days_remove = 0
-		days_re_enable = 30
-
-		cost = 10
+		days_remove = 70
+		days_re_enable = 0
 
 		complete_effect = {
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_convoys
+			}
+		}
+		remove_effect = {
 			if = {
-				limit = { has_completed_focus = HEL_upgrade_alchemy }
-
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 100
+				limit = {
+					NOT = { has_tech = convoys }
+				}
+				set_technology = {
+					convoys = 1
 				}
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 20
-				}
+			custom_effect_tooltip = HEL_can_alchemy_convoys
+			set_country_flag = HEL_alchemy_can_prod_convoys
+			add_to_variable = {
+				var = alchemist_free
+				value = cost_alchemist_study_convoys
 			}
 		}
 	}
+
+	# 歩兵ゴーレムの錬金生産を開始
+	HEL_dis_start_alchemy_golem_humanoid = {
+
+		icon = generic_military
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_golem_humanoid
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_golem_humanoid
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		visible = {
+            has_country_flag = HEL_alchemy_can_prod_golem_humanoid
+			NOT = { has_country_flag = HEL_alchemy_prod_golem_humanoid }
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = HEL_alchemy_prod_golem_humanoid
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_golem_humanoid
+			}
+			add_to_variable = {
+				var = working_alchemist_golem_humanoid
+				value = cost_alchemist_golem_humanoid
+			}
+		}
+	}
+
+	# 歩兵ゴーレムの錬金生産を修了
+	HEL_dis_stop_alchemy_golem_humanoid = {
+
+		icon = generic_military
+
+		available = {
+			has_country_flag = HEL_alchemy_prod_golem_humanoid
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			has_country_flag = HEL_alchemy_prod_golem_humanoid
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			clr_country_flag = HEL_alchemy_prod_golem_humanoid
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_golem_humanoid
+			}
+			set_variable = { working_alchemist_golem_humanoid = 0 }
+		}
+	}
+
+	# 歩兵装備の錬金生産を開始
+	HEL_dis_start_alchemy_infantry_weapons = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_infantry_weapons
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_infantry_weapons
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		visible = {
+            has_country_flag = HEL_alchemy_can_prod_infantry_weapons
+			NOT = { has_country_flag = HEL_alchemy_prod_infantry_weapons }
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = HEL_alchemy_prod_infantry_weapons
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_infantry_weapons
+			}
+			add_to_variable = {
+				var = working_alchemist_infantry_weapons
+				value = cost_alchemist_infantry_weapons
+			}
+		}
+	}
+
+	# 歩兵装備の錬金生産を修了
+	HEL_dis_stop_alchemy_infantry_weapons = {
+
+		icon = generic_industry
+
+		available = {
+			has_country_flag = HEL_alchemy_prod_infantry_weapons
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			has_country_flag = HEL_alchemy_prod_infantry_weapons
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			clr_country_flag = HEL_alchemy_prod_infantry_weapons
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_infantry_weapons
+			}
+			set_variable = { working_alchemist_infantry_weapons = 0 }
+		}
+	}
+
+	# 航空機の錬金生産を開始
+	HEL_dis_start_alchemy_airplane = {
+
+		icon = generic_air
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_airplane
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_airplane
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		visible = {
+            has_country_flag = HEL_alchemy_can_prod_golem_airplane
+			NOT = { has_country_flag = HEL_alchemy_prod_golem_airplane }
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = HEL_alchemy_prod_golem_airplane
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_airplane
+			}
+			add_to_variable = {
+				var = working_alchemist_airplane
+				value = cost_alchemist_airplane
+			}
+		}
+	}
+
+	# 航空機の錬金生産を修了
+	HEL_dis_stop_alchemy_airplane = {
+
+		icon = generic_air
+
+		available = {
+			has_country_flag = HEL_alchemy_prod_golem_airplane
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			has_country_flag = HEL_alchemy_prod_golem_airplane
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			clr_country_flag = HEL_alchemy_prod_golem_airplane
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_airplane
+			}
+			set_variable = { working_alchemist_airplane = 0 }
+		}
+	}
+
+	# 輸送船団の錬金生産を開始
+	HEL_dis_start_alchemy_convoys = {
+
+		icon = generic_naval
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEL_tooltip_enough_alchemist_convoys
+				check_variable = {
+					var = alchemist_free
+					value = cost_alchemist_convoys
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		visible = {
+            has_country_flag = HEL_alchemy_can_prod_convoys
+			NOT = { has_country_flag = HEL_alchemy_prod_convoys }
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = HEL_alchemy_prod_convoys
+			subtract_from_variable = {
+				var = alchemist_free
+				value = cost_alchemist_convoys
+			}
+			add_to_variable = {
+				var = working_alchemist_convoys
+				value = cost_alchemist_convoys
+			}
+		}
+	}
+
+	# 輸送船団の錬金生産を修了
+	HEL_dis_stop_alchemy_convoys = {
+
+		icon = generic_naval
+
+		available = {
+			has_country_flag = HEL_alchemy_prod_convoys
+		}
+
+		visible = {
+            has_completed_focus = HEL_devotion_to_alchemy
+			has_country_flag = HEL_alchemy_prod_convoys
+		}
+
+		fire_only_once = no
+
+		days_remove = 0
+		days_re_enable = 0
+
+		complete_effect = {
+			clr_country_flag = HEL_alchemy_prod_convoys
+			add_to_variable = {
+				var = alchemist_free
+				value = working_alchemist_convoys
+			}
+			set_variable = { working_alchemist_convoys = 0 }
+		}
+	}
+
 }
 
 HEL_vs_JAP = {

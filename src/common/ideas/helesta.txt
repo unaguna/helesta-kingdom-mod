@@ -124,34 +124,13 @@ ideas = {
 			picture = hol_expand_the_colonial_army
 
 			modifier = {
-				weekly_manpower = 2000
-				war_support_factor = 0.15
-			}
-		}
-
-		HEL_greater_golem_idea = {
-
-			allowed = {
-				original_tag = HEL
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-
-			picture = hol_expand_the_colonial_army
-
-			modifier = {
-				weekly_manpower = 10000
 				war_support_factor = 0.15
 			}
 		}
 
 	}
 
-	political_advisor = {
+	theorist = {
 		HEL_ange_katrina = {
 			
 			allowed = {
@@ -172,14 +151,20 @@ ideas = {
 				}
 				has_country_flag = HEL_ange_has_been_released
 			}
+						
+			research_bonus = {
+				nuclear = 0.2
+			}
 			
-			traits = { liver }
+			traits = { liver alchemist_1 }
 			
 			ai_will_do = {
 				factor = 1
 			}
 		}
+	}
 
+	political_advisor = {
 		HEL_inui_toko = {
 			
 			allowed = {
