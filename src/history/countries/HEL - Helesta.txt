@@ -27,6 +27,7 @@ set_popularities = {
 
 set_convoys = 5
 
+#recruit_character = HEL_lize_helesta
 recruit_character = HEL_ange_katrina
 recruit_character = HEL_inui_toko
 recruit_character = HEL_chaika_blain

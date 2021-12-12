@@ -1,4 +1,19 @@
 characters={
+	HEL_lize_helesta={
+		name=HEL_lize_helesta
+		portraits={
+			civilian={
+				large="gfx/leaders/HEL/Portrait_Lize_Helesta.dds"
+			}
+		}
+		country_leader={
+			expire="1965.1.1.1"
+			id=-1
+            traits = { liver }
+            ideology = fascism_ideology
+		}
+	}
+
     HEL_ange_katrina = {
         name=HEL_ange_katrina
 		portraits={

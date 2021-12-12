@@ -177,18 +177,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-            create_country_leader = {
-                name = "Lize"
-                desc = "POLITICS_LIZE_HELESTA_DESC"
-                picture = "Portrait_Lize_Helesta.dds"
-                expire = "1965.1.1"
-                ideology = fascism_ideology
-                traits = {
-                    liver
-                }
-            }
 			set_politics = {
 				ruling_party = fascism
+			}
+			recruit_character = HEL_lize_helesta
+			promote_character = {
+				character = HEL_lize_helesta
+				ideology = fascism_ideology
 			}
 			load_focus_tree = { 
 				tree = hel_imp_focus
