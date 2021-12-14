@@ -1,4 +1,20 @@
 characters={
+	# The father of Lize
+	HEL_king={
+		name=HEL_king
+		portraits={
+			civilian={
+				large="gfx/leaders/HEL/Portrait_King.dds"
+			}
+		}
+		country_leader={
+			expire="1965.1.1.1"
+			id=-1
+            traits = {  }
+            ideology = despotism
+		}
+	}
+
 	HEL_lize_helesta={
 		name=HEL_lize_helesta
 		portraits={

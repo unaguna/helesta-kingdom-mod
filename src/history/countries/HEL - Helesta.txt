@@ -27,6 +27,7 @@ set_popularities = {
 
 set_convoys = 5
 
+recruit_character = HEL_king
 #recruit_character = HEL_lize_helesta
 recruit_character = HEL_ange_katrina
 recruit_character = HEL_inui_toko
@@ -60,17 +61,6 @@ set_variable = { cost_alchemist_airplane = 1 }
 # 輸送船団錬金生産に必要な錬金術師
 set_variable = { cost_alchemist_convoys = 1 }
 
-# The father of Lize
-create_country_leader = {
-	name = "The King"
-	desc = "POLITICS_KING_HEL_DESC"
-	picture = "Portrait_King.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
 
 create_field_marshal = {
 	name = "Xhemal Aranitasi"
