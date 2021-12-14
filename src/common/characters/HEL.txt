@@ -121,4 +121,20 @@ characters={
 			traits = { liver prince_of_terror }
 		}
     }
+
+    HEL_xhemal_aranitasi = {
+        name=HEL_xhemal_aranitasi
+		portraits={
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+    }
 }
