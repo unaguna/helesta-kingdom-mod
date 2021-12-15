@@ -997,15 +997,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			hidden_trigger = { has_idea = HEL_ange_katrina }
+			hidden_trigger = { always = no }
 		}
 
 		ai_will_do = {
 			factor = 1			
-		}
-
-		bypass = {
-			has_idea = HEL_ange_katrina
 		}
 
 		completion_reward = {
@@ -1435,15 +1431,11 @@ focus_tree = {
 		cost = 0
 		
 		available = {
-			hidden_trigger = { has_idea = HEL_inui_toko }
+			hidden_trigger = { always = no }
 		}
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		bypass = {
-			has_idea = HEL_inui_toko
 		}
 
 		completion_reward = {

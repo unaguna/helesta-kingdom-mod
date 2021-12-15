@@ -60,6 +60,14 @@ characters={
                 nuclear = 0.2
             }
 			traits = { liver alchemist_1 }
+			on_add = { 
+				if = {
+					limit = {
+						NOT = { has_completed_focus = HEL_devotion_to_alchemy }
+					}
+					complete_national_focus = HEL_devotion_to_alchemy 
+				}
+			}
 		}
     }
 
@@ -90,6 +98,14 @@ characters={
                 has_country_flag = HEL_toko_has_come
             }
 			traits = { liver }
+			on_add = {
+				if = {
+					limit = {
+						NOT = { has_completed_focus = HEL_friendly_hell }
+					}
+					complete_national_focus = HEL_friendly_hell 
+				}
+			}
 		}
     }
 
