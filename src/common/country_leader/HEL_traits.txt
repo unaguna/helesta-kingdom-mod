@@ -7,6 +7,13 @@ leader_traits = {
 		political_power_factor = 0.1
     }
 
+	kerberos = {
+		random = no
+		sprite = 13
+
+		land_night_attack = 0.8
+	}
+
 	alchemist_1 = {
 		random = no
 		sprite = 14

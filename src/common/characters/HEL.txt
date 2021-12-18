@@ -59,7 +59,7 @@ characters={
             research_bonus = {
                 nuclear = 0.2
             }
-			traits = { liver alchemist_1 }
+			traits = { alchemist_1 }
 			on_add = { 
 				if = {
 					limit = {
@@ -97,7 +97,7 @@ characters={
                 }
                 has_country_flag = HEL_toko_has_come
             }
-			traits = { liver }
+			traits = { kerberos }
 			on_add = {
 				if = {
 					limit = {
@@ -134,7 +134,7 @@ characters={
                     name = "Lize"
                 }
             }
-			traits = { liver prince_of_terror }
+			traits = { prince_of_terror }
 		}
     }
 
