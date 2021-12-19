@@ -1,4 +1,4 @@
-﻿capital = 807
+﻿capital = 835
 
 OOB = "HEL_1936"
 
@@ -27,6 +27,13 @@ set_popularities = {
 
 set_convoys = 5
 
+recruit_character = HEL_king
+#recruit_character = HEL_lize_helesta
+recruit_character = HEL_ange_katrina
+recruit_character = HEL_inui_toko
+recruit_character = HEL_chaika_blain
+recruit_character = HEL_xhemal_aranitasi
+
 # 空き状態の錬金術師の数
 set_variable = { alchemist_free = 0 }
 # 歩兵ゴーレム錬金生産に割り当てられている錬金術師
@@ -54,27 +61,3 @@ set_variable = { cost_alchemist_infantry_weapons = 1 }
 set_variable = { cost_alchemist_airplane = 1 }
 # 輸送船団錬金生産に必要な錬金術師
 set_variable = { cost_alchemist_convoys = 1 }
-
-# The father of Lize
-create_country_leader = {
-	name = "The King"
-	desc = "POLITICS_KING_HEL_DESC"
-	picture = "Portrait_King.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Xhemal Aranitasi"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 1
-}
-
