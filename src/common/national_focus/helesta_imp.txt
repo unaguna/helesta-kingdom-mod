@@ -1276,7 +1276,6 @@ focus_tree = {
 				has_tech = concentrated_industry4
 				has_tech = dispersed_industry4
 			}
-			has_idea = HEL_ange_katrina
 		}
 
 		ai_will_do = {
