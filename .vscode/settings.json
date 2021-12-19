@@ -1,4 +1,18 @@
 {
     "hoi4ModUtilities.modFile": "c:\\Users\\need_\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\helesta-kingdom-mod\\descriptor.mod",
-    "files.eol": "\r\n"
+    "files.eol": "\r\n",
+    "cSpell.customDictionaries": {
+        "custom-dictionary-hoi4": {
+            "name": "custom-dictionary-hoi4",
+            "path": "${workspaceFolder}/.cspell/custom-dictionary-hoi4.txt",
+            "addWords": true,
+            "scope": "workspace"
+        },
+        "custom-dictionary-helesta-mod": {
+            "name": "custom-dictionary-helesta-mod",
+            "path": "${workspaceFolder}/.cspell/custom-dictionary-helesta-mod.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 }
