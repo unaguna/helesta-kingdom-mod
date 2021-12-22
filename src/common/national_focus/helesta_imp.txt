@@ -481,6 +481,7 @@ focus_tree = {
 				transfer_state = 644
 				transfer_state = 562
 				transfer_state = 637
+				transfer_state = 822
 			}
 		}
 	}
@@ -509,6 +510,7 @@ focus_tree = {
 				has_full_control_of_state = 644
 				has_full_control_of_state = 562
 				has_full_control_of_state = 637
+				has_full_control_of_state = 822
 			}
 		}
 
@@ -520,6 +522,7 @@ focus_tree = {
 					has_full_control_of_state = 644
 					has_full_control_of_state = 562
 					has_full_control_of_state = 637
+					has_full_control_of_state = 822
 				}
 			}
 		}
@@ -563,6 +566,10 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					air_base > 0
 				}
+				822 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
 			}
 		}
 
@@ -583,6 +590,12 @@ focus_tree = {
 					}
 				}
 				637 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+				822 = {
 					OR = {
 						NOT = { is_fully_controlled_by = ROOT }
 						air_base = 0
@@ -621,6 +634,7 @@ focus_tree = {
 				has_full_control_of_state = 644
 				has_full_control_of_state = 562
 				has_full_control_of_state = 637
+				has_full_control_of_state = 822
 			}
 		}
 
