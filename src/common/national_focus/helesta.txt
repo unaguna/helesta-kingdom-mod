@@ -488,9 +488,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			835 = {			
-				infrastructure > 9
-			}
+			# TODO: すでに鉄道のレベルがあればスキップ
 		}
 
 		cancel_if_invalid = yes
@@ -498,18 +496,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			if = {
-				limit = {
-					835 = {			
-						infrastructure < 10
-					}
+			build_railway = {
+				level = 5
+				controller_priority = {
+					base = 1
 				}
-				835 = {
-					set_building_level = {
-						type = infrastructure
-						level = 10
-					}
-				}
+				start_province = 7087
+				target_province = 7157
 			}
 			add_political_power = -50
 		}
