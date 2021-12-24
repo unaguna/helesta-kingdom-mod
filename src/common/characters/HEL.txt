@@ -24,7 +24,7 @@ characters={
 		}
 		country_leader={
 			expire="1965.1.1.1"
-			id=-1
+			id = 2101
             traits = { liver }
             ideology = fascism_ideology
 		}
@@ -46,14 +46,10 @@ characters={
                 original_tag = HEL
 			}
             visible = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
             available = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
                 has_country_flag = HEL_ange_has_been_released
             }
             research_bonus = {
@@ -87,14 +83,10 @@ characters={
                 original_tag = HEL
 			}
             visible = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
             available = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
                 has_country_flag = HEL_toko_has_come
             }
 			traits = { kerberos }
@@ -125,14 +117,10 @@ characters={
                 original_tag = HEL
 			}
             visible = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
             available = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
 			traits = { prince_of_terror }
 		}
