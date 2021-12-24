@@ -34,6 +34,9 @@ recruit_character = HEL_king
 recruit_character = HEL_ange_katrina
 recruit_character = HEL_inui_toko
 recruit_character = HEL_chaika_blain
+recruit_character = HEL_dokodoko
+recruit_character = HEL_yattaze
+recruit_character = HEL_valkyria
 recruit_character = HEL_xhemal_aranitasi
 
 # 空き状態の錬金術師の数

@@ -126,6 +126,81 @@ characters={
 		}
     }
 
+    HEL_dokodoko = {
+        name=HEL_dokodoko
+		portraits={
+			army={
+				small="GFX_idea_hel_elu"
+			}
+		}
+		advisor={
+			cost = 50
+			slot = high_command
+			idea_token = dokodoko
+			ledger = navy
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = { id = 2101 }
+            }
+            available = {
+                has_country_leader = { id = 2101 }
+            }
+			traits = { navy_anti_submarine_1 }
+		}
+    }
+
+    HEL_yattaze = {
+        name=HEL_yattaze
+		portraits={
+			army={
+				small="GFX_idea_hel_elu"
+			}
+		}
+		advisor={
+			cost = 75
+			slot = high_command
+			idea_token = yattaze
+			ledger = air
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = { id = 2101 }
+            }
+            available = {
+                has_country_leader = { id = 2101 }
+            }
+			traits = { air_air_combat_training_2 }
+		}
+    }
+
+    HEL_valkyria = {
+        name=HEL_valkyria
+		portraits={
+			army={
+				small="GFX_idea_hel_elu"
+			}
+		}
+		advisor={
+			cost = 75
+			slot = high_command
+			idea_token = valkyria
+			ledger = army
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = { id = 2101 }
+            }
+            available = {
+                has_country_leader = { id = 2101 }
+            }
+			traits = { army_cavalry_2 }
+		}
+    }
+
     HEL_xhemal_aranitasi = {
         name=HEL_xhemal_aranitasi
 		portraits={
