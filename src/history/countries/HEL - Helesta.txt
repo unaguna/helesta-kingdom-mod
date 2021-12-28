@@ -9,9 +9,11 @@ add_ideas = {
 
 set_technology = {
 	infantry_weapons = 1
+	motorised_infantry = 1
 	tech_support = 1
 	tech_recon = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 set_politics = {
@@ -32,6 +34,9 @@ recruit_character = HEL_king
 recruit_character = HEL_ange_katrina
 recruit_character = HEL_inui_toko
 recruit_character = HEL_chaika_blain
+recruit_character = HEL_dokodoko
+recruit_character = HEL_yattaze
+recruit_character = HEL_valkyria
 recruit_character = HEL_xhemal_aranitasi
 
 # 空き状態の錬金術師の数

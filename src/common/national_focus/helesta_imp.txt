@@ -481,6 +481,7 @@ focus_tree = {
 				transfer_state = 644
 				transfer_state = 562
 				transfer_state = 637
+				transfer_state = 822
 			}
 		}
 	}
@@ -509,6 +510,7 @@ focus_tree = {
 				has_full_control_of_state = 644
 				has_full_control_of_state = 562
 				has_full_control_of_state = 637
+				has_full_control_of_state = 822
 			}
 		}
 
@@ -520,6 +522,7 @@ focus_tree = {
 					has_full_control_of_state = 644
 					has_full_control_of_state = 562
 					has_full_control_of_state = 637
+					has_full_control_of_state = 822
 				}
 			}
 		}
@@ -563,6 +566,10 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					air_base > 0
 				}
+				822 = {
+					is_fully_controlled_by = ROOT
+					air_base > 0
+				}
 			}
 		}
 
@@ -583,6 +590,12 @@ focus_tree = {
 					}
 				}
 				637 = {
+					OR = {
+						NOT = { is_fully_controlled_by = ROOT }
+						air_base = 0
+					}
+				}
+				822 = {
 					OR = {
 						NOT = { is_fully_controlled_by = ROOT }
 						air_base = 0
@@ -621,6 +634,7 @@ focus_tree = {
 				has_full_control_of_state = 644
 				has_full_control_of_state = 562
 				has_full_control_of_state = 637
+				has_full_control_of_state = 822
 			}
 		}
 
@@ -957,9 +971,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			835 = {			
-				infrastructure > 9
-			}
+			# TODO: すでに鉄道のレベルがあればスキップ
 		}
 
 		cancel_if_invalid = yes
@@ -967,18 +979,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			if = {
-				limit = {
-					835 = {			
-						infrastructure < 10
-					}
+			build_railway = {
+				level = 5
+				controller_priority = {
+					base = 1
 				}
-				835 = {
-					set_building_level = {
-						type = infrastructure
-						level = 10
-					}
-				}
+				start_province = 7087
+				target_province = 7157
 			}
 			add_political_power = -50
 		}

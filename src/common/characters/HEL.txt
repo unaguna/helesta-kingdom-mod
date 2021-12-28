@@ -24,7 +24,7 @@ characters={
 		}
 		country_leader={
 			expire="1965.1.1.1"
-			id=-1
+			id = 2101
             traits = { liver }
             ideology = fascism_ideology
 		}
@@ -46,14 +46,10 @@ characters={
                 original_tag = HEL
 			}
             visible = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
             available = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
                 has_country_flag = HEL_ange_has_been_released
             }
             research_bonus = {
@@ -87,14 +83,10 @@ characters={
                 original_tag = HEL
 			}
             visible = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
             available = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
                 has_country_flag = HEL_toko_has_come
             }
 			traits = { kerberos }
@@ -119,22 +111,93 @@ characters={
 		advisor={
 			cost = 100
 			slot = political_advisor
-			idea_token = inui_toko
+			idea_token = chaika_blain
 			ledger = army
 			allowed = {
                 original_tag = HEL
 			}
             visible = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
             available = {
-                has_country_leader = {
-                    name = "Lize"
-                }
+                has_country_leader = { id = 2101 }
             }
 			traits = { prince_of_terror }
+		}
+    }
+
+    HEL_dokodoko = {
+        name=HEL_dokodoko
+		portraits={
+			army={
+				small="GFX_idea_hel_elu"
+			}
+		}
+		advisor={
+			cost = 50
+			slot = high_command
+			idea_token = dokodoko
+			ledger = navy
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = { id = 2101 }
+            }
+            available = {
+                has_country_leader = { id = 2101 }
+            }
+			traits = { navy_anti_submarine_1 }
+		}
+    }
+
+    HEL_yattaze = {
+        name=HEL_yattaze
+		portraits={
+			army={
+				small="GFX_idea_hel_elu"
+			}
+		}
+		advisor={
+			cost = 75
+			slot = high_command
+			idea_token = yattaze
+			ledger = air
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = { id = 2101 }
+            }
+            available = {
+                has_country_leader = { id = 2101 }
+            }
+			traits = { air_air_combat_training_2 }
+		}
+    }
+
+    HEL_valkyria = {
+        name=HEL_valkyria
+		portraits={
+			army={
+				small="GFX_idea_hel_elu"
+			}
+		}
+		advisor={
+			cost = 75
+			slot = high_command
+			idea_token = valkyria
+			ledger = army
+			allowed = {
+                original_tag = HEL
+			}
+            visible = {
+                has_country_leader = { id = 2101 }
+            }
+            available = {
+                has_country_leader = { id = 2101 }
+            }
+			traits = { army_cavalry_2 }
 		}
     }
 
