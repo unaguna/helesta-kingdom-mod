@@ -107,6 +107,8 @@
   HEL_influence_to_qing_desc:0 "中国大陸は欧米の影響をますます強く受けるようになりつつある。放っておけば全土が欧米の管理下に置かれるだろう。アジアの平和のために手を打たなければならない。"
   HEL_reclaim_qing_empire:0 "大清帝国"
   HEL_reclaim_qing_empire_desc:0 "中国大陸は皇帝の下で再び一つとなるべきだ。"
+  HEL_post_GEACPS:0 "大東亜構想の引継ぎ"
+  HEL_post_GEACPS_desc:0 "もはや日本による大東亜構想は泥船だ。我々自らが動かなければ、我が国も欧米の搾取に曝されることとなるだろう。"
   HEL_to_eurasia:0 "大陸進出の準備"
   HEL_to_eurasia_desc:0 "我々は旧領の領有権を主張しているに過ぎないが、大陸の国家群は我々への警戒を強めている。我々は備えなければならない。"
   HEL_negotiate_with_ussr:0 "ソ連との交渉"
