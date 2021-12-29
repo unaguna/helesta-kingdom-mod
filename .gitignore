@@ -1,5 +1,7 @@
 /memo/
 
+/libs
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
