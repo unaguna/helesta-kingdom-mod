@@ -14,5 +14,6 @@
             "addWords": true,
             "scope": "workspace"
         }
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
