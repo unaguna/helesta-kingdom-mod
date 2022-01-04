@@ -2,6 +2,12 @@
     "hoi4ModUtilities.modFile": "c:\\Users\\need_\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\helesta-kingdom-mod\\descriptor.mod",
     "files.eol": "\r\n",
     "cSpell.customDictionaries": {
+        "custom-dictionary-gradle": {
+            "name": "custom-dictionary-gradle",
+            "path": "${workspaceFolder}/.cspell/custom-dictionary-gradle.txt",
+            "addWords": true,
+            "scope": "workspace"
+        },
         "custom-dictionary-hoi4": {
             "name": "custom-dictionary-hoi4",
             "path": "${workspaceFolder}/.cspell/custom-dictionary-hoi4.txt",
@@ -14,5 +20,12 @@
             "addWords": true,
             "scope": "workspace"
         }
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "cSpell.enableFiletypes": [
+        "gradle",
+        "groovy",
+        "kotlin",
+        "kotlinscript"
+    ]
 }

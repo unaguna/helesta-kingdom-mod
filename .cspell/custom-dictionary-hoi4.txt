@@ -12,6 +12,7 @@ kaiserreich
 koshin_etsu
 Koshin-etsu
 kwantung
+localisation
 luso
 mefo
 megali
