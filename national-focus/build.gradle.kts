@@ -1,3 +1,3 @@
 extensions.configure<jp.unaguna.hoi4modding.gradle.Hoi4ModExtension>("hoi4mod") {
-    target.set("common/national_focus")
+    target = "common/national_focus"
 }

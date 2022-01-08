@@ -12,11 +12,11 @@ subprojects {
     apply(plugin="hoi4-modding-gradle-plugin")
 
     extensions.configure<jp.unaguna.hoi4modding.gradle.Hoi4ModExtension>("hoi4mod") {
-        moddir.set(MOD_ROOT)
+        moddir = MOD_ROOT
     }
 }
 
 extensions.configure<jp.unaguna.hoi4modding.gradle.Hoi4ModExtension>("hoi4mod") {
-    moddir.set(MOD_ROOT)
-    target.set("")
+    moddir = MOD_ROOT
+    target = ""
 }

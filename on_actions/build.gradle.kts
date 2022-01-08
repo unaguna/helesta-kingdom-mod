@@ -1,3 +1,3 @@
 extensions.configure<jp.unaguna.hoi4modding.gradle.Hoi4ModExtension>("hoi4mod") {
-    target.set("common/on_actions")
+    target = "common/on_actions"
 }
