@@ -1,6 +1,18 @@
 buildscript {
+    repositories {
+        mavenCentral()
+    }
     dependencies {
+        // TODO: remove if modding-plugin is fixed to contain it.
+        classpath("io.github.classgraph:classgraph:4.8.138")
+
         classpath(fileTree("libs"))
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
     }
 }
 
