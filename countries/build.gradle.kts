@@ -9,7 +9,3 @@ dependencies {
     implementation(project(":characters"))
     implementation(project(":variables"))
 }
-
-extensions.configure<jp.unaguna.hoi4modding.gradle.Hoi4ModExtension>("hoi4mod") {
-    target = "common"
-}
