@@ -9,4 +9,5 @@ class HelestaCountry : Country() {
     override val tag = "HEL"
     override val countryName = "Helesta"
     override val color = Color(2, 10, 222)
+    override val history by lazy { HelestaHistory() }
 }

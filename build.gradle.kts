@@ -1,17 +1,16 @@
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
     dependencies {
-        // TODO: remove if modding-plugin is fixed to contain it.
-        classpath("io.github.classgraph:classgraph:4.8.138")
-
-        classpath(fileTree("libs"))
+        classpath("jp.unaguna.hoi4-modding:hoi4-modding-gradle-plugin:0.0.1")
     }
 }
 
 allprojects {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 }

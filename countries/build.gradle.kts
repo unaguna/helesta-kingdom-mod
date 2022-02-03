@@ -4,7 +4,10 @@ plugins {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation(fileTree("../libs"))
+    implementation("jp.unaguna.hoi4-modding:hoi4-java-modding:0.0.1")
+
+    implementation(project(":characters"))
+    implementation(project(":variables"))
 }
 
 extensions.configure<jp.unaguna.hoi4modding.gradle.Hoi4ModExtension>("hoi4mod") {
