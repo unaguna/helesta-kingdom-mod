@@ -15,3 +15,7 @@ include("on_actions")
 include("opinion_modifiers")
 include("traits")
 include("variables")
+
+plugins {
+    id("com.google.cloud.artifactregistry.gradle-plugin").version("2.1.5")
+}

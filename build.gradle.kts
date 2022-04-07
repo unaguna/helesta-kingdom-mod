@@ -1,6 +1,8 @@
 buildscript {
     repositories {
-        mavenLocal()
+        maven {
+            setUrl("artifactregistry://asia-northeast1-maven.pkg.dev/hoi4-346504/hoi4-modding-maven")
+        }
         mavenCentral()
     }
     dependencies {
@@ -10,7 +12,9 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
+        maven {
+            setUrl("artifactregistry://asia-northeast1-maven.pkg.dev/hoi4-346504/hoi4-modding-maven")
+        }
         mavenCentral()
     }
 }
