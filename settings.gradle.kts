@@ -16,6 +16,23 @@ include("opinion_modifiers")
 include("traits")
 include("variables")
 
-plugins {
-    id("com.google.cloud.artifactregistry.gradle-plugin").version("2.1.5")
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            println("AAAAA")
+            println(requested.id.id)
+            println(requested.id.name)
+            if (requested.id.id.startsWith("jp.unaguna.hoi4-modding")) {
+                println("useAAAAA")
+                useModule("${requested.id}:${requested.id}.gradle.plugin:${requested.version}")
+            }
+        }
+    }
+
+    repositories {
+        gradlePluginPortal()
+        maven {
+            setUrl("gcs://unaguna-hoi4-maven/maven")
+        }
+    }
 }
